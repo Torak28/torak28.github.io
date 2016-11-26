@@ -1,12 +1,8 @@
-// Daniel Shiffman
-// http://codingrainbow.com
-// http://patreon.com/codingrainbow
-// Code for: https://youtu.be/17WoOqgXsRM
-
 var stars = []
 
 var speed;
 
+// Zawsze uzywane w p5
 function setup() {
   createCanvas(600, 600);
   for (var i = 0; i < 800; i++) {
@@ -14,6 +10,7 @@ function setup() {
   }
 }
 
+// Zawsze uzywane w p5
 function draw() {
   speed = map(mouseX, 0, width, 0, 50);
   background(0);
@@ -23,9 +20,6 @@ function draw() {
     stars[i].show();
   }
 }
-
-// Daniel Shiffman
-// Code for: https://youtu.be/17WoOqgXsRM
 
 function Star() {
   this.x = random(-width, width);
