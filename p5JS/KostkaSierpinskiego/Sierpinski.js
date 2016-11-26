@@ -2,6 +2,7 @@ var a = 0;
 var sponge = [];
 function setup(){
 	createCanvas(800,800, WEBGL);
+	normalMaterial();
 	var b = new Box(0,0,0,450);
 	sponge.push(b);
 
@@ -19,7 +20,6 @@ function mousePressed(){
 
 function draw() {
 	background(51);
-	normalMaterial();
 	rotateX(a);
 	rotateY(a * 0.4);
 	rotateZ(a * 0.1)
