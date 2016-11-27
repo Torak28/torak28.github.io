@@ -1,6 +1,6 @@
 var miasta = [];
 var liczbaMiast = 8;
-var tabDystans;
+var kolejnoscDystans;
 var zloteUstawienie;
 var kolejnosc = [];
 var iloscMozliwosci;
@@ -15,7 +15,7 @@ function setup() {
 	}
 
 	var d = policzDystans(miasta, kolejnosc);
-	tabDystans = d;
+	kolejnoscDystans = d;
 	zloteUstawienie = kolejnosc.slice();
 
 	iloscMozliwosci = silnia(liczbaMiast);
@@ -58,8 +58,8 @@ function draw() {
 	// swap(miasta, i, j);
 
 	var d = policzDystans(miasta, kolejnosc);
-	if (d < tabDystans) {
-		tabDystans = d;
+	if (d < kolejnoscDystans) {
+		kolejnoscDystans = d;
 		zloteUstawienie = kolejnosc.slice();
 	}
 
@@ -96,34 +96,34 @@ function policzDystans(punkty, kolejnosc) {
 //TEN KOD ZAJUMAŁEM Z INTERNETU
 function nastepnaKolejnosc() {
 	ile++;
-	// STEP 1 of the algorithm
- 	// https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
-  	var largestI = -1;
- 	for (var i = 0; i < kolejnosc.length - 1; i++) {
-    	if (kolejnosc[i] < kolejnosc[i + 1]) {
-    		largestI = i;
-    	}
-  	}
-  	if (largestI == -1) {
-    	noLoop();
-    	console.log('Koniec');
-  	}
+  	//Krok 1
+	//https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
+	var maxX = -1;
+	for (var i = 0; i < kolejnosc.length - 1; i++) {
+		if (kolejnosc[i] < kolejnosc[i + 1]) {
+			maxX = i;
+		}
+	}
+	if (maxX == -1) {
+		noLoop();
+		console.log('Koniec');
+	}
 
-  	// STEP 2
-  	var largestJ = -1;
-  	for (var j = 0; j < kolejnosc.length; j++) {
-    	if (kolejnosc[largestI] < kolejnosc[j]) {
-      		largestJ = j;
-    	}
-  	}
+	//Krok 2
+	var maxY = -1;
+	for (var j = 0; j < kolejnosc.length; j++) {
+		if(kolejnosc[maxX] < kolejnosc[j]) {
+			maxY = j;
+		}
+	} 
 
-  	// STEP 3
-  	swap(kolejnosc, largestI, largestJ);
+	//Krok 3
+	swap(kolejnosc, maxX, maxY);
 
-  	// STEP 4: reverse from largestI + 1 to the end
-  	var endArray = kolejnosc.splice(largestI + 1);
-  	endArray.reverse();
-  	kolejnosc = kolejnosc.concat(endArray);
+	//Krok 4
+	var kolejnoscOstateczny = kolejnosc.splice(maxX + 1);
+	kolejnoscOstateczny.reverse();
+	kolejnosc = kolejnosc.concat(kolejnoscOstateczny)
 }
 
 function silnia(n) {
