@@ -43,7 +43,7 @@ function draw() {
 
 	textSize(32);
   fill(255);
-  text("Punkty" + dlugosc, 20, 20);
+  text("Punkty" + this.dlugosc, 20, 20);
 }
 
 function keyPressed() {
