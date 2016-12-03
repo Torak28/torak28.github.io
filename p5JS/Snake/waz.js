@@ -28,7 +28,6 @@ function Waz() {
 
   this.show = function() {
 	fill(255);
-	
 	for (var i = 0; i < this.ogon.length; i++) {
 		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
 	}

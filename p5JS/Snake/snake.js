@@ -40,6 +40,10 @@ function draw() {
 
 	fill(255,0,100);
 	rect(jedzonko.x, jedzonko.y, skala, skala);
+
+	textSize(32);
+  fill(255);
+  text("Punkty" + dlugosc, 20, 20);
 }
 
 function keyPressed() {
