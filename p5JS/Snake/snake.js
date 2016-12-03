@@ -20,7 +20,7 @@ function setup() {
 	lokacja();
 }
 
-function pickLocation() {
+function lokacja() {
   var kolumny = floor(width/skala);
   var wiersze = floor(height/skala);
   jedzonko = createVector(floor(random(kolumny)), floor(random(wiersze)));
