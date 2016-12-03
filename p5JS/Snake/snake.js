@@ -10,6 +10,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
+  song.play();
   s = new Waz();
   frameRate(10);
 }
@@ -17,7 +18,6 @@ function setup() {
 
 function draw() {
   image(img, 0, 0);
-  song.play();
   s.update();
   s.show();
 }
