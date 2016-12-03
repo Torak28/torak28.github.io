@@ -21,8 +21,8 @@ function setup() {
 }
 
 function lokacja(){
-	var wiersze = floor(width/skala);
-	var kolumny = floor(height/skala);
+	var wiersze = floor(height/skala);
+	var kolumny = floor(width/skala);
 	jedzonko = createVector(floor(random(kolumny)), floor(random(wiersze)));
 }
 
