@@ -1,9 +1,11 @@
 var snake;
 var img;
-var skala = 25;
+var song;
+var skala = 27;
 
 function preload() {
   img = loadImage('images/tetris.png');
+  song = loadSound('assets/mario.mp3');
 }
 
 function setup() {
@@ -15,6 +17,7 @@ function setup() {
 
 function draw() {
   image(img, 0, 0);
+  song.play();
   s.update();
   s.show();
 }
