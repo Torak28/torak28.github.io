@@ -21,10 +21,10 @@ function setup() {
 }
 
 function lokacja() {
-  var kolumny = floor(width/skala);
-  var wiersze = floor(height/skala);
-  jedzonko = createVector(floor(random(kolumny)), floor(random(wiersze)));
-  jedzonko.mult(skala);
+	var kolumny = floor(width/skala);
+	var wiersze = floor(height/skala);
+	jedzonko = createVector(floor(random(kolumny)), floor(random(wiersze)));
+	jedzonko.mult(skala);
 }
 
 function draw() {
@@ -33,6 +33,7 @@ function draw() {
 	s.show();
 
 	if(s.zjedz(jedzonko)) {
+		this.dlugosc++;
 		ding.play();
 		lokacja();
 	}

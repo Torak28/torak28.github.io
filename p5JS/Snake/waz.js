@@ -3,6 +3,8 @@ function Waz() {
   this.y = 0;
   this.szybkoscX = 1;
   this.szybkoscY = 0;
+  this.dlugosc = 0;
+  this.ogon = [];
 
   this.kierunek = function(x, y){
 	this.szybkoscX = x;
@@ -10,6 +12,11 @@ function Waz() {
   }
 
   this.update = function() {
+	for (var i = 0; i < this.ogon.length - 1; i++) {
+		this.ogon[i] = this.ogon[i+1];
+	}
+	this.ogon[this.dlugosc - 1] = createVector(this.x,this.y);
+
 	this.x = this.x + this.szybkoscX * skala;
 	this.y = this.y + this.szybkoscY * skala;
 
@@ -19,15 +26,18 @@ function Waz() {
 
   this.show = function() {
 	fill(255);
+	for (var i = 0; i < this.dlugosc - 1; i++) {
+		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
+	}
 	rect(this.x, this.y, skala, skala);
   }
 
   this.zjedz = function(pos) {
-  	var d = dist(this.x, this.y, pos.x, pos.y);
-  	if (d<1){
-  		return true;
-  	}else{
-  		return false;
-  	}
+	var d = dist(this.x, this.y, pos.x, pos.y);
+	if (d<1){
+		return true;
+	}else{
+		return false;
+	}
   }
 }
