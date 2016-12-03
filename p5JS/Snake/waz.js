@@ -6,16 +6,6 @@ function Waz() {
   this.dlugosc = 0;
   this.ogon = [];
 
-  this.zjedz = function(pos) {
-	var d = dist(this.x, this.y, pos.x, pos.y);
-	if (d<1){
-		this.dlugosc++;
-		return true;
-	} else {
-		return false;
-	}
-  }
-
   this.kierunek = function(x, y){
 	this.szybkoscX = x;
 	this.szybkoscY = y;
@@ -26,7 +16,7 @@ function Waz() {
   		var pos = this.ogon[i];
   		var d = dist(this.x, this.y, pos.x, pos.y);
   		if (d > 1){
-  			console.log('Od nowa');
+  			console.log('Restar!');
   			this.dlugosc = 0;
   			this.ogon = [];
   		}
@@ -54,5 +44,15 @@ function Waz() {
 		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
 	}
 	rect(this.x, this.y, skala, skala);
+  }
+
+  this.zjedz = function(pos) {
+	var d = dist(this.x, this.y, pos.x, pos.y);
+	if (d<1){
+		this.dlugosc++;
+		return true;
+	}else{
+		return false;
+	}
   }
 }
