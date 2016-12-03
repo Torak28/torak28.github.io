@@ -1,6 +1,6 @@
 var snake;
 var img;
-var skala = 10;
+var skala = 25;
 
 function preload() {
   img = loadImage('images/tetris.png');
