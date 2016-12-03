@@ -29,16 +29,15 @@ function lokacja() {
 
 function draw() {
 	image(img, 0, 0);
+	s.smierc();
+	s.update();
+	s.show();
 
 	if(s.zjedz(jedzonko)) {
 		ding.play();
 		lokacja();
 	}
 
-	s.smierc();
-	s.update();
-	s.show();
-	
 	fill(255,0,100);
 	rect(jedzonko.x, jedzonko.y, skala, skala);
 
