@@ -3,7 +3,7 @@ var img;
 var skala = 10;
 
 function preload() {
-  song = loadImage('images/tetris.png');
+  img = loadImage('images/tetris.png');
 }
 
 function setup() {
