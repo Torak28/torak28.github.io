@@ -11,6 +11,17 @@ function Waz() {
 	this.szybkoscY = y;
   }
 
+  this.smierc = function() {
+  	for (var i = 0; i < this.ogon.length; i++) {
+  		var pos = this.ogon[i];
+  		var d = dist(this.x, this.y, pos.x, pos.y);
+  		if (d > 1){
+  			this.dlugosc = 0;
+  			this.ogon = [];
+  		}
+  	}
+  }
+
   this.update = function() {
 	if(this.dlugosc === this.ogon.length) {
 		for (var i = 0; i < this.ogon.length - 1; i++) {
