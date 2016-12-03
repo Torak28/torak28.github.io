@@ -37,13 +37,13 @@ function draw() {
 	s.smierc();
 	s.update();
 	s.show();
-	
+
 	fill(255,0,100);
 	rect(jedzonko.x, jedzonko.y, skala, skala);
 
 	textSize(32);
   fill(255);
-  text("Punkty: " + s.dlugosc, 20, 20);
+  text("Punkty: " + s.dlugosc, 20, 30);
 }
 
 function keyPressed() {
