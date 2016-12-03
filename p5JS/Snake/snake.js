@@ -14,7 +14,7 @@ function preload() {
 
 function setup() {
 	createCanvas(600, 600);
-	song.play();
+	song.loop();
 	s = new Waz();
 	frameRate(10);
 	lokacja();
