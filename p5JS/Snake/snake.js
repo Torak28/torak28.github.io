@@ -32,7 +32,7 @@ function draw() {
 	s.show();
 
 	if(s.zjedz(jedzonko)) {
-		ding.play();
+		//ding.play();
 		lokacja();
 	}
 
