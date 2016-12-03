@@ -12,7 +12,7 @@ function Waz() {
   }
 
   this.update = function() {
-  	if(this.dlugosc === this.ogon.length) {
+	if(this.dlugosc === this.ogon.length) {
 		for (var i = 0; i < this.ogon.length - 1; i++) {
 			this.ogon[i] = this.ogon[i+1];
 		}
@@ -37,6 +37,7 @@ function Waz() {
   this.zjedz = function(pos) {
 	var d = dist(this.x, this.y, pos.x, pos.y);
 	if (d<1){
+		this.dlugosc++;
 		return true;
 	}else{
 		return false;

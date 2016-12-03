@@ -33,7 +33,6 @@ function draw() {
 	s.show();
 
 	if(s.zjedz(jedzonko)) {
-		this.dlugosc++;
 		ding.play();
 		lokacja();
 	}
@@ -43,7 +42,7 @@ function draw() {
 
 	textSize(32);
   fill(255);
-  text("Punkty" + this.dlugosc, 20, 20);
+  text("Punkty" + s.dlugosc, 20, 20);
 }
 
 function keyPressed() {
