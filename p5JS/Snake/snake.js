@@ -32,8 +32,8 @@ function draw() {
 	s.show();
 
 	if(s.zjedz(jedzonko)) {
-		lokacja();
 		ding.play();
+		lokacja();
 	}
 
 	fill(255,0,100);

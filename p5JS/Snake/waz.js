@@ -13,8 +13,8 @@ function Waz() {
 	this.x = this.x + this.szybkoscX * skala;
 	this.y = this.y + this.szybkoscY * skala;
 
-	this.x = constrain(this.x, 1 ,width - skala);
-	this.y = constrain(this.y, 1, height - skala);
+	this.x = constrain(this.x, 0 ,width - skala);
+	this.y = constrain(this.y, 0, height - skala);
   }
 
   this.show = function() {
