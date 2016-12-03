@@ -12,8 +12,10 @@ function Waz() {
   }
 
   this.update = function() {
-	for (var i = 0; i < this.ogon.length - 1; i++) {
-		this.ogon[i] = this.ogon[i+1];
+  	if(this.dlugosc === this.ogon.length) {
+		for (var i = 0; i < this.ogon.length - 1; i++) {
+			this.ogon[i] = this.ogon[i+1];
+		}
 	}
 	this.ogon[this.dlugosc - 1] = createVector(this.x,this.y);
 
@@ -26,7 +28,8 @@ function Waz() {
 
   this.show = function() {
 	fill(255);
-	for (var i = 0; i < this.dlugosc - 1; i++) {
+	
+	for (var i = 0; i < this.ogon.length; i++) {
 		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
 	}
 	rect(this.x, this.y, skala, skala);
