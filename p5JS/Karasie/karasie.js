@@ -23,7 +23,7 @@ function Karas() {
 	this.update = function() {
 		this.szyb.add(this.przys);
 		this.pol.add(this.szyb);
-		this.przys.nult(0);
+		this.przys.mult(0);
 	}
 
 	this.show = function() {
