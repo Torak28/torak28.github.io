@@ -1,19 +1,33 @@
-var karas;
+var rodzina;
 
 function setup() {
 	createCanvas(400, 300)
 	karas = new Karas();
+	rodzina = new rodzinaKarasiow();
 }
 
 function draw() {
 	background(0);
-	karas.update();
-	karas.show();
+	rodzinaKarasiow.run();
 }
+
+function rodzinaKarasiow() {
+	this.karasie = [];
+	this.wielkosc = 100;
+
+	for (var i = 0; i < this.wilekosc; i++) {
+		this.karasie[i] = new Karas();
+
+	this.run = function() {
+		for (var i = 0; i < this.wielkosc; i++) {	
+			this.karasie[i].update();
+			this.karasie[i].show();
+		}
+	}
 
 function Karas() {
 	this.pol = createVector(width/2, height);
-	this.szyb = createVector(0, -1);
+	this.szyb = p5.Vector.random2D();
 	this.przys = createVector();
 
 	this.dodajSile = function(sila){
