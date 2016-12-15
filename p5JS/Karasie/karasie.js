@@ -28,7 +28,7 @@ function Karas() {
 
 	this.show = function() {
 		push()
-		translate(this.pol.x, this.pos.y);
+		translate(this.pol.x, this.pol.y);
 		rotate(this.szyb.heading());
 		rectMode(CENTER);
 		rect(0,0,50,10);
