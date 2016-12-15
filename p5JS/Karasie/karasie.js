@@ -1,9 +1,14 @@
+var karas;
+
 function setup() {
 	createCanvas(400, 300)
+	karas = new Karas();
 }
 
 function draw() {
 	background(0);
+	karas.update();
+	karas.show();
 }
 
 function Karas() {
