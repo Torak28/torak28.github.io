@@ -11,22 +11,6 @@ function draw() {
 	rodzina.run();
 }
 
-function rodzinaKarasiow() {
-	this.karasie = [];
-	this.wielkosc = 100;
-
-	for (var i = 0; i < this.wilekosc; i++) {
-		this.karasie[i] = new Karas();
-	}
-
-	this.run = function() {
-		for (var i = 0; i < this.wielkosc; i++) {	
-			this.karasie[i].update();
-			this.karasie[i].show();
-		}
-	}
-}
-
 function Karas() {
 	this.pol = createVector(width/2, height);
 	this.szyb = p5.Vector.random2D();
@@ -51,5 +35,21 @@ function Karas() {
 		rectMode(CENTER);
 		rect(0,0,25,5);
 		pop()
+	}
+}
+
+function rodzinaKarasiow() {
+	this.karasie = [];
+	this.wielkosc = 100;
+
+	for (var i = 0; i < this.wilekosc; i++) {
+		this.karasie[i] = new Karas();
+	}
+
+	this.run = function() {
+		for (var i = 0; i < this.wielkosc; i++) {	
+			this.karasie[i].update();
+			this.karasie[i].show();
+		}
 	}
 }
