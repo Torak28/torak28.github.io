@@ -13,7 +13,7 @@ function draw() {
 
 function Karas() {
 	this.pol = createVector(width/2, height);
-	this.szyb = createVector();
+	this.szyb = createVector(0, -1);
 	this.przys = createVector();
 
 	this.dodajSile = function(sila){
@@ -31,7 +31,7 @@ function Karas() {
 		translate(this.pol.x, this.pos.y);
 		rotate(this.szyb.heading());
 		rectMode(CENTER);
-		rect(0,0,10,50);
+		rect(0,0,50,10);
 		pop()
 	}
 }
