@@ -2,7 +2,7 @@ var rodzina;
 
 function setup() {
 	createCanvas(400, 300)
-	karas = new Karas();
+	//karas = new Karas();
 	rodzina = new rodzinaKarasiow();
 }
 
