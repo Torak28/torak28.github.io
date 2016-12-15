@@ -17,6 +17,7 @@ function rodzinaKarasiow() {
 
 	for (var i = 0; i < this.wilekosc; i++) {
 		this.karasie[i] = new Karas();
+	}
 
 	this.run = function() {
 		for (var i = 0; i < this.wielkosc; i++) {	
@@ -24,6 +25,7 @@ function rodzinaKarasiow() {
 			this.karasie[i].show();
 		}
 	}
+}
 
 function Karas() {
 	this.pol = createVector(width/2, height);
