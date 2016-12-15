@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
 	background(0);
-	rodzinaKarasiow.run();
+	rodzina.run();
 }
 
 function rodzinaKarasiow() {
