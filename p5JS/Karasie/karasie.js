@@ -42,10 +42,12 @@ function Karas() {
 
 	this.show = function() {
 		push()
+		noStroke();
+		fill(255,150);
 		translate(this.pol.x, this.pol.y);
 		rotate(this.szyb.heading());
 		rectMode(CENTER);
-		rect(0,0,50,10);
+		rect(0,0,25,5);
 		pop()
 	}
 }
