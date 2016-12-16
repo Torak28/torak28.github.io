@@ -2,13 +2,14 @@ var rodzina;
 
 function setup() {
 	createCanvas(400, 300)
-	//karas = new Karas();
+	karas = new Karas();
 	rodzina = new rodzinaKarasiow();
 }
 
 function draw() {
 	background(0);
-	rodzina.run();
+	karas.update();
+	karas.show()
 }
 
 function Karas() {
