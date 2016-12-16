@@ -9,7 +9,11 @@ function setup() {
 function draw() {
 	background(0);
 	karas.update();
-	karas.show()
+	karas.show();
+	for (var i = 0; i < rodzina.wielkosc; i++) {	
+		rodzina.karasie[i].update();
+		rodzina.karasie[i].show();
+	}
 }
 
 function Karas() {
