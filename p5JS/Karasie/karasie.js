@@ -1,13 +1,13 @@
 var rodzinaKarasi;
-var dlugoscZycia = 400;
+var dlugoscZycia = 150;
 var zycie;
 var it = 0;
 var cel;
-var iloscKarasi = 25;
-var mag = 0.2;
-var rx = 100;
-var ry = 150
-var rw = 200;
+var iloscKarasi = 1;
+var maksymalnaMoc = 0.2;
+var rx = 125;
+var ry = 140;
+var rw = 150;
 var rh = 10;
 
 function setup() {
@@ -28,6 +28,7 @@ function draw() {
 		//rodzinaKarasi = new populacjaKarasi();
 		it = 0;
 	}
+	fill(255);
 	rect(rx, ry, rw, rh)
 	ellipse(cel.x, cel.y, 16, 16)
 }
@@ -40,6 +41,7 @@ function populacjaKarasi() {
 	for (var i = 0; i < this.wielkosc; i++) {
 		this.karasie[i] = new Karas();
 	}
+
 
 	this.obliczFunkcje = function() {
 		var maxDopasowanie = 0;
@@ -78,6 +80,7 @@ function populacjaKarasi() {
 		for (var i = 0; i < this.wielkosc; i++) {
 			this.karasie[i].update();
 			this.karasie[i].show();
+			console.log(this.karasie[0].pol.x, this.karasie[0].pol.y)
 		}
 	}
 }
@@ -89,7 +92,7 @@ function DNA(geny) {
 		this.geny = [];
 		for(var i = 0; i < dlugoscZycia; i++) {
 			this.geny[i] = p5.Vector.random2D();
-			this.geny[i].setMag(mag)
+			this.geny[i].setMag(maksymalnaMoc)
 		} 
 	}
 	
@@ -109,14 +112,14 @@ function DNA(geny) {
 		for(var i =0; i < this.geny.length; i++) {
 			if(random(1) < 0.01) {
 				this.geny[i] = p5.Vector.random2D();
-				this.geny[i].setMag(mag);
+				this.geny[i].setMag(maksymalnaMoc);
 			}
 		}
 	}
 }
 
 function Karas(dna) {
-	this.pol = createVector(width/2, height);
+	this.pol = createVector(width/2, height-30);
 	this.szybkosc = createVector();
 	this.przyspieszenie = createVector();
 	this.skonczone = false;
@@ -150,14 +153,16 @@ function Karas(dna) {
 			this.skonczone = true;
 			this.pol = cel.copy();
 		}
-		if(this.pol.x > rx && this.pol.x < rx+rw && this.pol.y > ry && this.pol < ry + rh){
-			this.smierc = true;
-		}
 		if (this.pol.x > width || this.pol.x < 0){
 			this.smierc = true;
+			console.log("rip");
 		}
 		if (this.pol.y > height || this.pol.y < 0){
 			this.smierc = true;
+		}
+		if(this.pol.x > rx && this.pol.x < rx + rw && this.pol.y > ry && this.pol < ry + rh){
+			this.smierc = true;
+			console.log("tak");
 		}
 
 		this.dodajSile(this.dna.geny[it]);
