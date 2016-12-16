@@ -1,9 +1,10 @@
 var rodzinaKarasi;
-var dlugoscZycia = 200;
+var dlugoscZycia = 400;
 var zycie;
 var it = 0;
 var cel;
 var iloscKarasi = 25;
+var mag = 0.2;
 var rx = 100;
 var ry = 150
 var rw = 200;
@@ -88,7 +89,7 @@ function DNA(geny) {
 		this.geny = [];
 		for(var i = 0; i < dlugoscZycia; i++) {
 			this.geny[i] = p5.Vector.random2D();
-			this.geny[i].setMag(0.1)
+			this.geny[i].setMag(mag)
 		} 
 	}
 	
@@ -108,7 +109,7 @@ function DNA(geny) {
 		for(var i =0; i < this.geny.length; i++) {
 			if(random(1) < 0.01) {
 				this.geny[i] = p5.Vector.random2D();
-				this.geny[i].setMag(0.1);
+				this.geny[i].setMag(mag);
 			}
 		}
 	}
@@ -119,6 +120,7 @@ function Karas(dna) {
 	this.szybkosc = createVector();
 	this.przyspieszenie = createVector();
 	this.skonczone = false;
+	this.smierc = false;
 	if(dna){
 		this.dna = dna;
 	}else{
@@ -136,6 +138,10 @@ function Karas(dna) {
 		if(this.skonczone){
 			this.dopasowanie *= 10;
 		}
+		if(this.smierc) {
+			this.dopasowanie /= 10;
+		}
+
 	}
 
 	this.update = function() {
@@ -144,11 +150,22 @@ function Karas(dna) {
 			this.skonczone = true;
 			this.pol = cel.copy();
 		}
+		if(this.pol.x > rx && this.pol.x < rx+rw && this.pol.y > ry && this.pol < ry + rh){
+			this.smierc = true;
+		}
+		if (this.pol.x > width || this.pol.x < 0){
+			this.smierc = true;
+		}
+		if (this.pol.y > height || this.pol.y < 0){
+			this.smierc = true;
+		}
+
 		this.dodajSile(this.dna.geny[it]);
-		if(!this.skonczone){
+		if(!this.skonczone && !this.smierc){
 			this.szybkosc.add(this.przyspieszenie);
 			this.pol.add(this.szybkosc);
 			this.przyspieszenie.mult(0);
+			this.szybkosc.limit(4);
 		}
 	}
 
