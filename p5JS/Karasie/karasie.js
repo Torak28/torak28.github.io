@@ -3,6 +3,11 @@ var dlugoscZycia = 200;
 var zycie;
 var it = 0;
 var cel;
+var iloscKarasi = 25;
+var rx = 100;
+var ry = 150
+var rw = 200;
+var rh = 10;
 
 function setup() {
 	createCanvas(400, 300)
@@ -17,18 +22,55 @@ function draw() {
 	zycie.html(it)
 	it++;
 	if(it == dlugoscZycia) {
-		rodzinaKarasi = new populacjaKarasi();
+		rodzinaKarasi.obliczFunkcje();
+		rodzinaKarasi.selekcja();
+		//rodzinaKarasi = new populacjaKarasi();
 		it = 0;
 	}
+	rect(rx, ry, rw, rh)
 	ellipse(cel.x, cel.y, 16, 16)
 }
 
 function populacjaKarasi() {
 	this.karasie = [];
-	this.wielkosc = 25;
+	this.wielkosc = iloscKarasi;
+	this.matingpool = [];
 
 	for (var i = 0; i < this.wielkosc; i++) {
 		this.karasie[i] = new Karas();
+	}
+
+	this.obliczFunkcje = function() {
+		var maxDopasowanie = 0;
+		for (var i = 0; i < this.wielkosc; i++) {
+			this.karasie[i].obliczDopasowanie();
+			if(this.karasie[i].dopasowanie > maxDopasowanie) {
+				maxDopasowanie = this.karasie[i].dopasowanie;
+			}
+		}
+		//createP(maxDopasowanie);
+		for (var i = 0; i < this.wielkosc; i++) {
+			this.karasie[i].dopasowanie /= maxDopasowanie;
+		}
+		this.matingpool = [];
+		for (var i = 0; i < this.wielkosc; i++) {
+			var n = this.karasie[i].dopasowanie * 100;
+			for(var j = 0; j < n; j++) {
+				this.matingpool.push(this.karasie[i]);
+			}
+		}
+	}
+
+	this.selekcja = function() {
+		var noweKarasie = [];
+		for(var i =0; i < this.karasie.length; i++){
+			var rodzicA = random(this.matingpool).dna;
+			var rodzicB = random(this.matingpool).dna;
+			var dziecko = rodzicA.krossover(rodzicB);
+			dziecko.mutacja();
+			noweKarasie[i] = new Karas(dziecko);
+		}
+		this.karasie = noweKarasie;
 	}
 
 	this.run = function() {
@@ -39,29 +81,75 @@ function populacjaKarasi() {
 	}
 }
 
-function DNA() {
-	this.geny = [];
-	for(var i = 0; i < dlugoscZycia; i++) {
-		this.geny[i] = p5.Vector.random2D();
-		this.geny[i].setMag(0.1)
-	} 
+function DNA(geny) {
+	if (geny){
+		this.geny = geny;
+	} else {
+		this.geny = [];
+		for(var i = 0; i < dlugoscZycia; i++) {
+			this.geny[i] = p5.Vector.random2D();
+			this.geny[i].setMag(0.1)
+		} 
+	}
+	
+	this.krossover = function(rodzic) {
+		var noweDNA = [];
+		var srodek = floor(random(this.geny.length))
+		for(var i = 0; i < this.geny.length; i++) {
+			if(i>srodek){
+				noweDNA[i] = this.geny[i];
+			}else{
+				noweDNA[i] = rodzic.geny[i];
+			}
+		}
+		return new DNA(noweDNA);
+	}
+	this.mutacja = function() {
+		for(var i =0; i < this.geny.length; i++) {
+			if(random(1) < 0.01) {
+				this.geny[i] = p5.Vector.random2D();
+				this.geny[i].setMag(0.1);
+			}
+		}
+	}
 }
 
-function Karas() {
+function Karas(dna) {
 	this.pol = createVector(width/2, height);
 	this.szybkosc = createVector();
 	this.przyspieszenie = createVector();
-	this.dna = new DNA();
+	this.skonczone = false;
+	if(dna){
+		this.dna = dna;
+	}else{
+		this.dna = new DNA();
+	}
+	this.dopasowanie = 0;
 
 	this.dodajSile = function(force){
 		this.przyspieszenie.add(force);
 	}
 
+	this.obliczDopasowanie = function() {
+		var d = dist(this.pol.x, this.pol.y, cel.x, cel.y);
+		this.dopasowanie = map(d, 0, width, width, 0)
+		if(this.skonczone){
+			this.dopasowanie *= 10;
+		}
+	}
+
 	this.update = function() {
+		var d = dist(this.pol.x, this.pol.y, cel.x, cel.y);
+		if (d < 7){
+			this.skonczone = true;
+			this.pol = cel.copy();
+		}
 		this.dodajSile(this.dna.geny[it]);
-		this.szybkosc.add(this.przyspieszenie);
-		this.pol.add(this.szybkosc);
-		this.przyspieszenie.mult(0);
+		if(!this.skonczone){
+			this.szybkosc.add(this.przyspieszenie);
+			this.pol.add(this.szybkosc);
+			this.przyspieszenie.mult(0);
+		}
 	}
 
 	this.show = function() {
