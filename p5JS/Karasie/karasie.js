@@ -1,9 +1,9 @@
 var rodzinaKarasi;
-var dlugoscZycia = 150;
+var dlugoscZycia = 400;
 var zycie;
 var it = 0;
 var cel;
-var iloscKarasi = 1;
+var iloscKarasi = 50;
 var maksymalnaMoc = 0.2;
 var rx = 125;
 var ry = 140;
@@ -80,7 +80,6 @@ function populacjaKarasi() {
 		for (var i = 0; i < this.wielkosc; i++) {
 			this.karasie[i].update();
 			this.karasie[i].show();
-			console.log(this.karasie[0].pol.x, this.karasie[0].pol.y)
 		}
 	}
 }
@@ -155,14 +154,12 @@ function Karas(dna) {
 		}
 		if (this.pol.x > width || this.pol.x < 0){
 			this.smierc = true;
-			console.log("rip");
 		}
 		if (this.pol.y > height || this.pol.y < 0){
 			this.smierc = true;
 		}
-		if(this.pol.x > rx && this.pol.x < rx + rw && this.pol.y > ry && this.pol < ry + rh){
+		if(this.pol.x >= rx && this.pol.x <= rx + rw && this.pol.y >= ry && this.pol.y <= ry + rh){
 			this.smierc = true;
-			console.log("tak");
 		}
 
 		this.dodajSile(this.dna.geny[it]);
