@@ -1,34 +1,44 @@
-var rodzina;
+var rodzinaKarasi;
 
 function setup() {
 	createCanvas(400, 300)
-	karas = new Karas();
-	rodzina = new rodzinaKarasiow();
+	rodzinaKarasi = new populacjaKarasi();
 }
 
 function draw() {
 	background(0);
-	karas.update();
-	karas.show();
-	for (var i = 0; i < rodzina.wielkosc; i++) {	
-		rodzina.karasie[i].update();
-		rodzina.karasie[i].show();
+	rodzinaKarasi.run();
+}
+
+function populacjaKarasi() {
+	this.karasie = [];
+	this.wielkosc = 25;
+
+	for (var i = 0; i < this.wielkosc; i++) {
+		this.karasie[i] = new Karas();
+	}
+
+	this.run = function() {
+		for (var i = 0; i < this.wielkosc; i++) {
+			this.karasie[i].update();
+			this.karasie[i].show();
+		}
 	}
 }
 
 function Karas() {
 	this.pol = createVector(width/2, height);
-	this.szyb = p5.Vector.random2D();
-	this.przys = createVector();
+	this.szybkosc = p5.Vector.random2D();
+	this.przyspieszenie = createVector();
 
-	this.dodajSile = function(sila){
-		this.przys.add(sila);
+	this.applyForce = function(force){
+		this.przyspieszenie.add(force);
 	}
 
 	this.update = function() {
-		this.szyb.add(this.przys);
-		this.pol.add(this.szyb);
-		this.przys.mult(0);
+		this.szybkosc.add(this.przyspieszenie);
+		this.pol.add(this.szybkosc);
+		this.przyspieszenie.mult(0);
 	}
 
 	this.show = function() {
@@ -36,25 +46,9 @@ function Karas() {
 		noStroke();
 		fill(255,150);
 		translate(this.pol.x, this.pol.y);
-		rotate(this.szyb.heading());
+		rotate(this.szybkosc.heading());
 		rectMode(CENTER);
 		rect(0,0,25,5);
 		pop()
-	}
-}
-
-function rodzinaKarasiow() {
-	this.karasie = [];
-	this.wielkosc = 100;
-
-	for (var i = 0; i < this.wilekosc; i++) {
-		this.karasie[i] = new Karas();
-	}
-
-	this.run = function() {
-		for (var i = 0; i < this.wielkosc; i++) {	
-			this.karasie[i].update();
-			this.karasie[i].show();
-		}
 	}
 }
