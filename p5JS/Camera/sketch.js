@@ -13,6 +13,7 @@ function setup() {
 function draw() {
   background(51);
   image(capture, 0, 0, 320, 240);
+  filter(DILATE);
   //video.loadPixels();
   //loadPixels();
   //for (var y = 0; y < video.height; y++) {
