@@ -56,6 +56,7 @@ function draw() {
 			score = 0;
 			asteroids = [];
 			tlo.stop();
+			poziom = 0;
 			setup();
 		}
 		asteroids[i].render();
