@@ -21,7 +21,7 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	tlo.loop();
 	ship = new Ship();
-	for (var i = 0; i < 5; i++) {
+	for (var i = 0; i < (3 + poziom*2); i++) {
 		asteroids.push(new Asteroid());
 	}
 	for (var i = 0; i < 800; i++) {
@@ -46,7 +46,7 @@ function draw() {
 	colorMode(HSB, 100);
 	fill(255);
 	text("Punkty: " + score,10,30);
-	text("Poziom: " + poziom, 10, 50);
+	text("Poziom: " + poziom, 10, 60);
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
 			end.play();
@@ -87,6 +87,13 @@ function draw() {
 	ship.turn();
 	ship.update();
 	ship.edges();
+	if(asteroids.length == 0){
+		ship.pos = createVector(width / 2, height / 2);
+		poziom += 1;
+		asteroids = [];
+		tlo.stop();
+		setup();
+	}
 
 
 }
