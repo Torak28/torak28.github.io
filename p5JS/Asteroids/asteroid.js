@@ -3,6 +3,10 @@ function Asteroid(pos, r) {
 		this.pos = pos.copy();
 	} else {
 		this.pos = createVector(random(width), random(height))
+		var d = dist(width/2, height/2, this.pos.x, this.pos.y);
+		if(d < 30){
+			this.pos = createVector(random(width), random(height))
+		}
 	}
 	if (r) {
 		this.r = r * 0.5;

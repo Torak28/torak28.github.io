@@ -14,18 +14,17 @@ function setup() {
 }
 
 function draw() {
-	console.log(score);
 	background(0);
 	textSize(32);
-	fill(255);
-	text("Punkty: " + score,30,30)
+	textFont("Helvetica");
+	fill('green');
+	text("Punkty: " + score,10,30)
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
-			//console.log('ooops!');
-			textSize(40);
-			fill('green');
-			text("Pograna", width/2 - 100, height/2);
-			text("Spacją zacznies od nowa", width/2 - 225, height/2 + 50);
+			ship.pos = createVector(width / 2, height / 2);
+			score = 0;
+			asteroids = [];
+			setup();
 		}
 		asteroids[i].render();
 		asteroids[i].update();
@@ -53,8 +52,6 @@ function draw() {
 		}
 	}
 
-	//console.log(lasers.length);
-
 	ship.render();
 	ship.turn();
 	ship.update();
@@ -78,22 +75,4 @@ function keyPressed() {
 	} else if (keyCode == UP_ARROW) {
 		ship.boosting(true);
 	}
-}
-
-function HUD() {
-	push();
-	textSize(30);
-	fill(255);
-	text("Wynik: " + this.score, width - 250, 30);
-	textSize(20);
-	text("Pomoc:", 20, height - 80);
-	text("Strzałeczki d poruszania,", 20, height - 50);
-	text("Spacja do strzelania.", 20, height - 20);
-	/*if(this.gameOver) {
-		textSize(40);
-		fill('green');
-		text("Pograna", width/2 - 100, height/2);
-		text("Spacją zacznies od nowa", width/2 - 225, height/2 + 50);
-	}*/
-	pop();
 }
