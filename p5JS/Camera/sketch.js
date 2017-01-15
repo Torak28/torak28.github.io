@@ -10,6 +10,6 @@ function setup() {
 function draw() {
   background(255);
   image(video, 0, 0, 320, 240);
-  filter(DILATE);
+  filter(THRESHOLD);
  
 }
