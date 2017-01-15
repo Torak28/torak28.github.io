@@ -4,11 +4,19 @@ var lasers = [];
 var score = 0;
 var stars = []
 var speed = 5;
+var boom;
+var end;
+var laser;
+
+function preload() {
+	boom = loadSound('assets/boom.wav');
+	end = loadSound('assets/end.wav');
+	laser = loadSound('assets/laser.wav');
+}
 
 function setup() {
 	console.log(score);
 	createCanvas(windowWidth, windowHeight);
-	//createCanvas(600,600);
 	ship = new Ship();
 	for (var i = 0; i < 5; i++) {
 		asteroids.push(new Asteroid());
@@ -36,6 +44,7 @@ function draw() {
 	text("Punkty: " + score,10,30)
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
+			end.play();
 			ship.pos = createVector(width / 2, height / 2);
 			score = 0;
 			asteroids = [];
@@ -49,6 +58,7 @@ function draw() {
 	for (var i = lasers.length - 1; i >= 0; i--) {
 		lasers[i].render();
 		lasers[i].update();
+		laser.play();
 		if (lasers[i].offscreen()) {
 			lasers.splice(i, 1);
 		} else {
@@ -58,6 +68,7 @@ function draw() {
 						var newAsteroids = asteroids[j].breakup();
 						asteroids = asteroids.concat(newAsteroids);
 						score += 10;
+						boom.play();
 					}
 					asteroids.splice(j, 1);
 					lasers.splice(i, 1);
