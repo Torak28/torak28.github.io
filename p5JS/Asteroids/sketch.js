@@ -8,6 +8,7 @@ var boom;
 var end;
 var laser;
 var tlo;
+var poziom = 1;
 
 function preload() {
 	boom = loadSound('assets/boom.wav');
@@ -45,6 +46,7 @@ function draw() {
 	colorMode(HSB, 100);
 	fill(255);
 	text("Punkty: " + score,10,30)
+	text("Poziom: " + poziom, 10 50);
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
 			end.play();
