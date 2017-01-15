@@ -9,12 +9,14 @@ var end;
 var laser;
 var tlo;
 var poziom = 1;
+var win;
 
 function preload() {
 	boom = loadSound('assets/boom.wav');
 	end = loadSound('assets/end.wav');
 	laser = loadSound('assets/laser.wav');
 	tlo = loadSound('assets/tlo.mp3');
+	win = loadSound('assets/win.wav');
 }
 
 function setup() {
@@ -72,12 +74,12 @@ function draw() {
 					if (asteroids[j].r > 10) {
 						var newAsteroids = asteroids[j].breakup();
 						asteroids = asteroids.concat(newAsteroids);
-						score += 10;
-						boom.play();
 					}
 					asteroids.splice(j, 1);
 					lasers.splice(i, 1);
 					break;
+					score += 10;
+					boom.play();
 				}
 			}
 		}
@@ -93,6 +95,7 @@ function draw() {
 		asteroids = [];
 		tlo.stop();
 		setup();
+		win.play();
 	}
 
 
