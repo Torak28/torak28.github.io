@@ -77,9 +77,9 @@ function draw() {
 					}
 					asteroids.splice(j, 1);
 					lasers.splice(i, 1);
-					break;
 					score += 10;
 					boom.play();
+					break;
 				}
 			}
 		}
