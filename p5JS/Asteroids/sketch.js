@@ -29,6 +29,7 @@ function setup() {
 }
 
 function draw() {
+	console.log(asteroids.length);
 	background(0);
   	translate(width / 2, height / 2);
   	for (var i = 0; i < stars.length; i++) {
