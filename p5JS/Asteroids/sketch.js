@@ -45,7 +45,7 @@ function draw() {
 	var pom3 = random(10, 255);
 	colorMode(HSB, 100);
 	fill(255);
-	text("Punkty: " + score,10,30)
+	text("Punkty: " + score,10,30);
 	text("Poziom: " + poziom, 10 50);
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
