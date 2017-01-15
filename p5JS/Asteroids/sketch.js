@@ -2,19 +2,30 @@ var ship;
 var asteroids = [];
 var lasers = [];
 var score = 0;
+var stars = []
+var speed = 5;
 
 function setup() {
 	console.log(score);
-	//createCanvas(windowWidth, windowHeight);
-	createCanvas(640,360);
+	createCanvas(windowWidth, windowHeight);
+	//createCanvas(600,600);
 	ship = new Ship();
 	for (var i = 0; i < 5; i++) {
 		asteroids.push(new Asteroid());
 	}
+	for (var i = 0; i < 800; i++) {
+    	stars[i] = new Star();
+  	}
 }
 
 function draw() {
 	background(0);
+  	translate(width / 2, height / 2);
+  	for (var i = 0; i < stars.length; i++) {
+    	stars[i].update();
+    	stars[i].show();
+  	}
+  	translate( - width / 2,  - height / 2);
 	textSize(32);
 	textFont("Helvetica");
 	var pom1 = random(10, 255);

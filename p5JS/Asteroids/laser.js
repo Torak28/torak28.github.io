@@ -11,7 +11,7 @@ function Laser(spos, angle) {
 		push();
 		stroke(random(255), random(255), random(255));
 		strokeWeight(6);
-		point(this.pos.x, this.pos.y);
+		ellipse(this.pos.x, this.pos.y, 5, 7);
 		pop();
 	}
 
