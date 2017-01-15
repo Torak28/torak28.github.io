@@ -16,9 +16,16 @@ function setup() {
 function draw() {
 	console.log(score);
 	background(0);
+	textSize(32);
+	fill(255);
+	text("Punkty: " + score,30,30)
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
 			//console.log('ooops!');
+			textSize(40);
+			fill('green');
+			text("Pograna", width/2 - 100, height/2);
+			text("Spacją zacznies od nowa", width/2 - 225, height/2 + 50);
 		}
 		asteroids[i].render();
 		asteroids[i].update();
