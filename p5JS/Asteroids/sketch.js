@@ -7,16 +7,18 @@ var speed = 5;
 var boom;
 var end;
 var laser;
+var tlo;
 
 function preload() {
 	boom = loadSound('assets/boom.wav');
 	end = loadSound('assets/end.wav');
 	laser = loadSound('assets/laser.wav');
+	tlo = loadSound('assets/tlo.mp3');
 }
 
 function setup() {
-	console.log(score);
 	createCanvas(windowWidth, windowHeight);
+	tlo.loop();
 	ship = new Ship();
 	for (var i = 0; i < 5; i++) {
 		asteroids.push(new Asteroid());
@@ -58,7 +60,6 @@ function draw() {
 	for (var i = lasers.length - 1; i >= 0; i--) {
 		lasers[i].render();
 		lasers[i].update();
-		laser.play();
 		if (lasers[i].offscreen()) {
 			lasers.splice(i, 1);
 		} else {
@@ -94,6 +95,7 @@ function keyReleased() {
 function keyPressed() {
 	if (key == ' ') {
 		lasers.push(new Laser(ship.pos, ship.heading));
+		laser.play();
 	} else if (keyCode == RIGHT_ARROW) {
 		ship.setRotation(0.1);
 	} else if (keyCode == LEFT_ARROW) {
