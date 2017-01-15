@@ -25,7 +25,7 @@ function draw() {
   
       var bright = (r+g+b)/3;
       fill(bright);
-      rect(x*vSacale,y*vSacale,vSacale,vScale);
+      rect(x*vScale,y*vScale,vScale,vScale);
     }
   }
  
