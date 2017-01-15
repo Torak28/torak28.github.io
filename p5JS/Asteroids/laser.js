@@ -9,7 +9,7 @@ function Laser(spos, angle) {
 	
 	this.render = function() {
 		push();
-		stroke('yellow');
+		stroke(random(255), random(255), random(255));
 		strokeWeight(6);
 		point(this.pos.x, this.pos.y);
 		pop();

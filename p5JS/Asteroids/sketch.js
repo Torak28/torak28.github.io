@@ -17,7 +17,11 @@ function draw() {
 	background(0);
 	textSize(32);
 	textFont("Helvetica");
-	fill('green');
+	var pom1 = random(10, 255);
+	var pom2 = random(10, 255);
+	var pom3 = random(10, 255);
+	colorMode(HSB, 100);
+	fill(255);
 	text("Punkty: " + score,10,30)
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
