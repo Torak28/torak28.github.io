@@ -1,9 +1,12 @@
 var ship;
 var asteroids = [];
 var lasers = [];
+var score = 0;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	console.log(score);
+	//createCanvas(windowWidth, windowHeight);
+	createCanvas(640,360);
 	ship = new Ship();
 	for (var i = 0; i < 5; i++) {
 		asteroids.push(new Asteroid());
@@ -11,11 +14,11 @@ function setup() {
 }
 
 function draw() {
+	console.log(score);
 	background(0);
-
 	for (var i = 0; i < asteroids.length; i++) {
 		if (ship.hits(asteroids[i])) {
-			console.log('ooops!');
+			//console.log('ooops!');
 		}
 		asteroids[i].render();
 		asteroids[i].update();
@@ -33,6 +36,7 @@ function draw() {
 					if (asteroids[j].r > 10) {
 						var newAsteroids = asteroids[j].breakup();
 						asteroids = asteroids.concat(newAsteroids);
+						score += 10;
 					}
 					asteroids.splice(j, 1);
 					lasers.splice(i, 1);
@@ -42,7 +46,7 @@ function draw() {
 		}
 	}
 
-	console.log(lasers.length);
+	//console.log(lasers.length);
 
 	ship.render();
 	ship.turn();
@@ -67,4 +71,22 @@ function keyPressed() {
 	} else if (keyCode == UP_ARROW) {
 		ship.boosting(true);
 	}
+}
+
+function HUD() {
+	push();
+	textSize(30);
+	fill(255);
+	text("Wynik: " + this.score, width - 250, 30);
+	textSize(20);
+	text("Pomoc:", 20, height - 80);
+	text("Strzałeczki d poruszania,", 20, height - 50);
+	text("Spacja do strzelania.", 20, height - 20);
+	/*if(this.gameOver) {
+		textSize(40);
+		fill('green');
+		text("Pograna", width/2 - 100, height/2);
+		text("Spacją zacznies od nowa", width/2 - 225, height/2 + 50);
+	}*/
+	pop();
 }
