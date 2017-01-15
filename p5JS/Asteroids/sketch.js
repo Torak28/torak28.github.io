@@ -50,6 +50,7 @@ function draw() {
 			ship.pos = createVector(width / 2, height / 2);
 			score = 0;
 			asteroids = [];
+			tlo.stop();
 			setup();
 		}
 		asteroids[i].render();
