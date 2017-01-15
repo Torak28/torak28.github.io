@@ -1,17 +1,17 @@
 var video;
 
-var vScale = 40;
+var vScale = 12;
 
 function setup() {
-  createCanvas(320, 240);
+  createCanvas(160, 120);
   pixelDensity(1);
   video = createCapture(VIDEO);
-  video.size(320,240);
+  video.size(160,120);
   //video.size(width/vScale, height/vScale);
 }
 
 function draw() {
-  background(51);
+  background(255);
   //image(video, 0, 0, 320, 240);
   //filter(DILATE);
   video.loadPixels();
