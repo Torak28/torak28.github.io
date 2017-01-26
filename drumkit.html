@@ -66,6 +66,13 @@
 		audio.play();
 		key.classList.add('playing');
 	})
+
+	function removeTransition(e){
+		
+	}
+
+	const keys = document.querySelector('.key');
+	keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 </script>
 
 </body>
