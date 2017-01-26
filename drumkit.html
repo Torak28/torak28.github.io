@@ -60,7 +60,9 @@
 <script>
 	window.addEventListener('keydown', function(e) {
 		 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-		if(!audio) return;
+		 const key = document.querySelector(`key[data-key="${e.keyCode}"]`);
+		if(!audio) return; //coby nie gralo dla innych. W sensie zeby nie zwracalo nulla
+		audio.currentTime = 0; //coby sie zapetlalo
 		audio.play();
 	})
 </script>
