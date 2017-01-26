@@ -64,6 +64,7 @@
 		if(!audio) return; //coby nie gralo dla innych. W sensie zeby nie zwracalo nulla
 		audio.currentTime = 0; //coby sie zapetlalo
 		audio.play();
+		key.classList.add('playing');
 	})
 </script>
 
