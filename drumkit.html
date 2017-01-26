@@ -58,22 +58,21 @@
 	<audio data-key="76" src="assets/drumkit/tink.wav"></audio>
 
 <script>
-	window.addEventListener('keydown', function(e) {
-		 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-		 const key = document.querySelector(`key[data-key="${e.keyCode}"]`);
-		if(!audio) return; //coby nie gralo dla innych. W sensie zeby nie zwracalo nulla
-		audio.currentTime = 0; //coby sie zapetlalo
-		audio.play();
-		key.classList.add('playing');
-	})
-
-	function removeTransition(e){
-		if(e.propertyName !== 'transform') return;//tylko przejscie
-		this.classList.remove('playing');
+	function removeTransition(e) {
+		if (e.propertyName !== 'transform') return; //tylko przejscie
+		e.target.classList.remove('playing');
 	}
-
+	function playSound(e) {
+		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+		const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+		if (!audio) return; //coby nie gralo dla innych. W sensie zeby nie zwracalo nulla
+		key.classList.add('playing');
+		audio.currentTime = 0;
+		audio.play();
+	}
 	const keys = Array.from(document.querySelectorAll('.key'));
 	keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+	window.addEventListener('keydown', playSound);
 </script>
 
 </body>
