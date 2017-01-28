@@ -7,8 +7,8 @@ function setup() {
   input.position(20, 65);
 
   button = createButton('klik');
-  button.position(150, 65);
-  button.mousePressed(greet);
+  button.position(170, 65);
+  button.mousePressed(greet(input.value()));
 
   greeting = createElement('h2', 'Wpisz tu cos');
   greeting.position(20, 5);
@@ -17,11 +17,10 @@ function setup() {
   textSize(50);
 }
 
-function greet() {
-  var name = input.value();
-  input.value('');
+function greet(s) {
+  var name = s;
 
-  for (var i=0; i<200; i++) {
+  for (var i=0; i<50; i++) {
     push();
     fill(random(255), 255, 255);
     translate(random(width), random(height));
