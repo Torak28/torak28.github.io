@@ -89,3 +89,7 @@ function greet5() {
     pop();
   }
 }
+function myFunction() {
+  input.toString();
+  document.getElementById("tabelka").innerHTML = input;
+}
