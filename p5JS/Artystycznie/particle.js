@@ -1,7 +1,7 @@
 function Particle(x,y){
 	this.x = x;
 	this.y = y;
-	this.r = random(slider2.value(),slider3.value());
+	this.r;
 
 	this.update = function(){
 		this.x += random(-10,10);
@@ -12,6 +12,7 @@ function Particle(x,y){
 
 	this.show = function(){
 		noStroke();
+		this.r = random(slider2.value(),slider3.value());
 		var px = floor(this.x / vScale);
 		var py = floor(this.y / vScale);
 		var col = video.get(px,py);

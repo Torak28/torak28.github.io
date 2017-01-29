@@ -10,13 +10,17 @@ function setup() {
   pixelDensity(1);
   video = createCapture(VIDEO);
   video.size(width/vScale, height/vScale);
+  slider = createSlider(0,255,127);
+  slider.position(1350, 30);
+  slider2 = createSlider(1,25,4);
+  slider2.position(1350, 100);
+  slider3 = createSlider(2,50,32);
+  slider3.position(1350, 170);
   for (var i = 0; i < 200; i++) {
     particles[i] = new Particle(random(width), random(height));
   }
-  slider = createSlider(0,255,127);
-  slider2 = createSlider(1,25,4);
-  slider3 = createSlider(2,50,32);
-  background(51);
+  fill(0, 102, 153);
+  text("ALA MA KOTA A KOT MA ALE XD", 1350, 250);
 }
 
 function draw() {
