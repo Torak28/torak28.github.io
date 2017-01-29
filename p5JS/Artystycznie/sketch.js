@@ -3,7 +3,7 @@ var vScale = 1;
 
 var particles = [];
 
-var slider;
+var slider, slider2, slider3;
 
 function setup() {
   createCanvas(640, 480);
@@ -14,6 +14,8 @@ function setup() {
     particles[i] = new Particle(random(width), random(height));
   }
   slider = createSlider(0,255,127);
+  slider2 = createSlider(1,25,4);
+  slider3 = createSlider(2,50,32);
   background(51);
 }
 
