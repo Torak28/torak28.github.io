@@ -1,12 +1,13 @@
-var k = 5/8;
+var slider;
 function setup(){
 	createCanvas(400,400);
+	slider = createSlider(1, 10, 4, 0.1);
 }
 
 function draw(){
 	background(51);
 	translate(width/2, height/2);
-
+	k = slider.value();
 	beginShape();
 		stroke(255);
 		noFill();
