@@ -16,7 +16,7 @@ function setup() {
   slider2.position(1350, 100);
   slider3 = createSlider(2,50,32);
   slider3.position(1350, 170);
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 400; i++) {
     particles[i] = new Particle(random(width), random(height));
   }
   fill(0, 102, 153);
