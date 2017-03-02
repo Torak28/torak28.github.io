@@ -17,9 +17,9 @@ function draw(){
 		noFill();
 		strokeWeight(1);
 		for (var i = 0; i < TWO_PI * d; i+=0.02) {
-			var r = 200 * cos(k * a);
-			var x = r * cos(a);
-			var y = r * sin(a);
+			var r = 200 * cos(k * i);
+			var x = r * cos(i);
+			var y = r * sin(i);
 			vertex(x,y);
 		}
 	endShape(CLOSE);
