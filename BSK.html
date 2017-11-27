@@ -1,0 +1,1377 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>BSK</title></head><body><article class="markdown-body"><h3 id="1-zaszyfrowac-swoje-nazwisko-cezarem-z-kluczem-2"><a name="user-content-1-zaszyfrowac-swoje-nazwisko-cezarem-z-kluczem-2" href="#1-zaszyfrowac-swoje-nazwisko-cezarem-z-kluczem-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Zaszyfrować swoje nazwisko Cezarem z kluczem 2</h3>
+<p>Ciołek-Żelechowski<br />
+Dkpnfł-Ąfmfdjpztłk</p>
+<h3 id="2-algorytmy-kryptograficzne-symetryczne-to"><a name="user-content-2-algorytmy-kryptograficzne-symetryczne-to" href="#2-algorytmy-kryptograficzne-symetryczne-to" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Algorytmy kryptograficzne symetryczne to:</h3>
+<p>A) <strong>IDEA</strong><br />
+B) <strong>3DES</strong><br />
+C) LUC<br />
+D) MD5<br />
+E) <strong>RC6</strong><br />
+F) <strong>RC4</strong></p>
+<h3 id="3-algorytmy-kryptograficzne-asymetryczne-to"><a name="user-content-3-algorytmy-kryptograficzne-asymetryczne-to" href="#3-algorytmy-kryptograficzne-asymetryczne-to" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Algorytmy kryptograficzne asymetryczne to:</h3>
+<p>A) SHA<br />
+B) <strong>RSA</strong><br />
+C) BlowFish<br />
+D) <strong>ElGamal</strong></p>
+<h3 id="4-algorytmami-blokowymi-sa"><a name="user-content-4-algorytmami-blokowymi-sa" href="#4-algorytmami-blokowymi-sa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. Algorytmami blokowymi są:</h3>
+<p>A) <strong>RSA</strong><br />
+B) <strong>DES</strong><br />
+C) RC4 <br />
+D) DES </p>
+<h3 id="5-w-celu-zapewnienia-uwierzytelnienia-w-systemie-kryptograficznym-asymetrycznym-nalezy"><a name="user-content-5-w-celu-zapewnienia-uwierzytelnienia-w-systemie-kryptograficznym-asymetrycznym-nalezy" href="#5-w-celu-zapewnienia-uwierzytelnienia-w-systemie-kryptograficznym-asymetrycznym-nalezy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. W celu zapewnienia uwierzytelnienia w systemie kryptograficznym asymetrycznym należy:</h3>
+<p>A) wykonać szyfrowanie z kluczem jawnym nadawcy<br />
+B) wykonać szyfrowanie z kluczem jawnym odbiorcy<br />
+C) <strong>wykonać szyfrowanie z kluczem prywatnym nadawcy</strong><br />
+D) wykonać szyfrowanie z kluczem prywatnym odbiorcy</p>
+<h3 id="6-funkcje-hashujace-suza-do"><a name="user-content-6-funkcje-hashujace-suza-do" href="#6-funkcje-hashujace-suza-do" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. Funkcje hashujące służą do:</h3>
+<p>A) <strong>generowania podpisów cyfrowych</strong><br />
+B) <strong>kontroli integralności</strong><br />
+C) podniesienia poziomu poufności<br />
+D) bezpiecznej dystrybucji kluczy</p>
+<h3 id="7-klucz-dla-algorytmu-rsa-mozemy-wygenerowac-z-liczb-pq"><a name="user-content-7-klucz-dla-algorytmu-rsa-mozemy-wygenerowac-z-liczb-pq" href="#7-klucz-dla-algorytmu-rsa-mozemy-wygenerowac-z-liczb-pq" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7. Klucz dla algorytmu RSA możemy wygenerować z liczb (p,q):</h3>
+<p>A) 17 i 8<br />
+B) 21 i 3<br />
+C) <strong>31 i 5</strong><br />
+D) 11 i 27 </p>
+<h3 id="8-certyfikat-serwera-uzywany-w-ssl-zawiera"><a name="user-content-8-certyfikat-serwera-uzywany-w-ssl-zawiera" href="#8-certyfikat-serwera-uzywany-w-ssl-zawiera" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8. Certyfikat serwera używany w SSL zawiera:</h3>
+<p>A) <strong>adres domenowy serwera</strong><br />
+B) adres IP serwera<br />
+C) <strong>adres domenowy wystawcy certyfikatu</strong><br />
+D) klucz jawny wystawcy certyfikatu </p>
+<h3 id="9-medium-sieciowym-w-ktorym-podsuchiwanie-jest-najtrudniejsze-jest"><a name="user-content-9-medium-sieciowym-w-ktorym-podsuchiwanie-jest-najtrudniejsze-jest" href="#9-medium-sieciowym-w-ktorym-podsuchiwanie-jest-najtrudniejsze-jest" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9. Medium sieciowym, w którym podsłuchiwanie jest najtrudniejsze jest:</h3>
+<p>A) Skrętka miedziana<br />
+B) Skrętka ekranowa <br />
+C) <strong>Światłowód wielomodowy</strong><br />
+D) Śieć bezprzewodowa (radiowa)</p>
+<h3 id="10-kiedy-podsuchiwanie-ramek-sniffing-jest-mozliwe-w-domenie-kolizyjnej"><a name="user-content-10-kiedy-podsuchiwanie-ramek-sniffing-jest-mozliwe-w-domenie-kolizyjnej" href="#10-kiedy-podsuchiwanie-ramek-sniffing-jest-mozliwe-w-domenie-kolizyjnej" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10. Kiedy podsłuchiwanie ramek (sniffing) jest możliwe w domenie kolizyjnej:</h3>
+<p>A) <strong>Zawsze</strong><br />
+B) Nigdy<br />
+C) Tylko w wyniku ataku ARP poissoning<br />
+D) Tylko w wyniku ataku DoS</p>
+<h3 id="11-kryptoanaliza-roznicowa-jest-wykorzystywana-do-ataku-na"><a name="user-content-11-kryptoanaliza-roznicowa-jest-wykorzystywana-do-ataku-na" href="#11-kryptoanaliza-roznicowa-jest-wykorzystywana-do-ataku-na" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11. Kryptoanaliza różnicowa jest wykorzystywana do ataku na:</h3>
+<p>A) <strong>Algorytmy kryptograficzne symetryczne</strong><br />
+B) Funkcje skrótu<br />
+C) Algorytmy kryptograficzne asymetryczne<br />
+D) Kryptograficzne sumy kontrolne</p>
+<h3 id="12-wiekszosc-algorytmow-symetrycznych-bazuje-na-operacjach"><a name="user-content-12-wiekszosc-algorytmow-symetrycznych-bazuje-na-operacjach" href="#12-wiekszosc-algorytmow-symetrycznych-bazuje-na-operacjach" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>12. Większość algorytmów symetrycznych bazuje na operacjach:</h3>
+<p>A) matematycznych na dużych liczbach<br />
+B) <strong>permutacji</strong><br />
+C) <strong>podstawiania</strong><br />
+D) odwaracania funkcji liniowych</p>
+<h3 id="13-algorytm-kryptograficzny-obliczeniowo-bezpieczny-moze-byc-zamany-metoda-brutalna"><a name="user-content-13-algorytm-kryptograficzny-obliczeniowo-bezpieczny-moze-byc-zamany-metoda-brutalna" href="#13-algorytm-kryptograficzny-obliczeniowo-bezpieczny-moze-byc-zamany-metoda-brutalna" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>13. Algorytm kryptograficzny obliczeniowo bezpieczny może być złamany metodą brutalną:</h3>
+<p>A) w czasie krótszym niż 50 dni<br />
+B) w czasie krótszym niż 50 minut<br />
+C) <strong>w czasie dłuższym niż 50 lat</strong> <br />
+D) nigdy</p>
+<h3 id="14-szyfrowanie-symetryczne-w-porownaniu-z-asymetrycznym"><a name="user-content-14-szyfrowanie-symetryczne-w-porownaniu-z-asymetrycznym" href="#14-szyfrowanie-symetryczne-w-porownaniu-z-asymetrycznym" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>14. Szyfrowanie symetryczne w porównaniu z asymetrycznym:</h3>
+<p>A) <strong>jest szybsze</strong><br />
+B) zapewnia wyższy poziom bezpieczeństwa<br />
+C) <strong>jest łatwiejsze w realizacji sprzętowej</strong><br />
+D) wymaga rzadszej zmiany klucza szyfrującego</p>
+<h3 id="15-obliczyc-wynik-operacji-bitowej-25-xor-10"><a name="user-content-15-obliczyc-wynik-operacji-bitowej-25-xor-10" href="#15-obliczyc-wynik-operacji-bitowej-25-xor-10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>15. Obliczyć wynik operacji bitowej 25 XOR 10:</h3>
+<table>
+<thead>
+<tr>
+<th>p</th>
+<th>q</th>
+<th>p XOR q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-w-algorytmie-des-na-wejsciu-sbloku-widocznego-ponizej-pojawia-sie-wartosc-40-podac-wartosc-na-wyjsciu-sbloku"><a name="user-content-16-w-algorytmie-des-na-wejsciu-sbloku-widocznego-ponizej-pojawia-sie-wartosc-40-podac-wartosc-na-wyjsciu-sbloku" href="#16-w-algorytmie-des-na-wejsciu-sbloku-widocznego-ponizej-pojawia-sie-wartosc-40-podac-wartosc-na-wyjsciu-sbloku" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16. W algorytmie DES, na wejściu Sbloku widocznego poniżej pojawiła się wartość 40. Podać wartość na wyjściu Sbloku</h3>
+<p>40 -&gt; 1 0100 0</p>
+<p>wiersz -&gt; 10(pierwszy i ostatni)<br />
+kolumna -&gt; 0100(środek)</p>
+<p>Indeksowane od <strong>0</strong></p>
+<h3 id="17-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb"><a name="user-content-17-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb" href="#17-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>17. Trybem pracy DES, w którym możliwe jest równoległe szyfrowanie wielu bloków jest tryb:</h3>
+<p>A) <strong>elektronicznej książki kodowej (ECB)</strong><br />
+B) wiązania bloków (CBC) z<br />
+C) ze sprzężeniem zwrotnym <br />
+D) ze sprzężeniem zwrotnym wyjściowym z</p>
+<h3 id="18-algorytm-diffiegohellmana-suzy-do"><a name="user-content-18-algorytm-diffiegohellmana-suzy-do" href="#18-algorytm-diffiegohellmana-suzy-do" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>18. Algorytm DiffiegoHellmana służy do:</h3>
+<p>A) podpisywania danych<br />
+B) <strong>wygenerowania i bezpiecznej dystrybucji klucza symetrycznego</strong><br />
+C) generowania kluczy jawny-prywatny<br />
+D) bezpiecznej dystrybucji kluczy prywatnych </p>
+<h3 27363_="27363," 391="391" id="19-na-ile-blokow-bedzie-podzielona-wiadomosc-o-dugosci-1500-bitow-przy-szyfrowaniu-algorytmem-rsa-kluczem"><a name="user-content-19-na-ile-blokow-bedzie-podzielona-wiadomosc-o-dugosci-1500-bitow-przy-szyfrowaniu-algorytmem-rsa-kluczem" href="#19-na-ile-blokow-bedzie-podzielona-wiadomosc-o-dugosci-1500-bitow-przy-szyfrowaniu-algorytmem-rsa-kluczem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>19. Na ile bloków będzie podzielona wiadomość o długośći 1500 bitów przy szyfrowaniu algorytmem RSA kluczem</h3>
+<p>391=110000111 <br />
+M mniej n czyli <br />
+M mniej 391 <br />
+Ergo n = 9bitów<br />
+Czyli o 1 mniej to <strong>8</strong><br />
+czyli 8 bitów dla M 1500/8 =~ 188</p>
+<h3 id="20-protokoy-zwiazane-z-dystrybucja-i-weryfikacja-certyfikatow-cyfrowych-to"><a name="user-content-20-protokoy-zwiazane-z-dystrybucja-i-weryfikacja-certyfikatow-cyfrowych-to" href="#20-protokoy-zwiazane-z-dystrybucja-i-weryfikacja-certyfikatow-cyfrowych-to" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>20. Protokoły związane z dystrybucją i weryfikacją certyfikatów cyfrowych to:</h3>
+<p>A) SSL<br />
+B) <strong>OCSP</strong><br />
+C) X.509<br />
+D) <strong>CMP</strong></p>
+<h3 id="21-do-zaszyfrowania-pliku-przechowywanego-na-dysku-komputera-mozna-uzyc"><a name="user-content-21-do-zaszyfrowania-pliku-przechowywanego-na-dysku-komputera-mozna-uzyc" href="#21-do-zaszyfrowania-pliku-przechowywanego-na-dysku-komputera-mozna-uzyc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>21. Do zaszyfrowania pliku przechowywanego na dysku komputera można użyć:</h3>
+<p>A) <strong>PGP</strong><br />
+B) SSL<br />
+C) SSH<br />
+D) PEM</p>
+<h3 id="22-w-sieci-zaufania-pgp-web-of-trust-klucze-publiczne-sa-podpisywane-przez"><a name="user-content-22-w-sieci-zaufania-pgp-web-of-trust-klucze-publiczne-sa-podpisywane-przez" href="#22-w-sieci-zaufania-pgp-web-of-trust-klucze-publiczne-sa-podpisywane-przez" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>22. W sieci zaufania PGP ( Web of Trust ) klucze publiczne są podpisywane przez:</h3>
+<p>A) Właściciela certyfikatu<br />
+B) <strong>‘Znajomych’ właściciela certyfikatu</strong><br />
+C) Organ wydający certyfikaty<br />
+D) Serwer uwierzytelniający (np. RADIUS)</p>
+<h3 id="23-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku"><a name="user-content-23-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku" href="#23-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>23. Certyfikat klucza publicznego trafia na listę CRL w przypadku:</h3>
+<p>A) Ujawnienia klucza publicznego<br />
+B) Wygaśnięcia czasu ważności certyfikatu<br />
+C) <strong>Utraty klucza prywatnego</strong><br />
+D) <strong>Zastąpienia ważnego jeszcze certyfikatu nowym</strong></p>
+<h3 id="24-w-wyniku-zaszyfrowania-tekstu-reksio-technika-transpozycyjna-moze-byc"><a name="user-content-24-w-wyniku-zaszyfrowania-tekstu-reksio-technika-transpozycyjna-moze-byc" href="#24-w-wyniku-zaszyfrowania-tekstu-reksio-technika-transpozycyjna-moze-byc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>24. W wyniku zaszyfrowania tekstu REKSIO techniką transpozycyjną może być</h3>
+<p>A) JANIAK<br />
+B) <strong>OISERK </strong><br />
+C) <strong>EIKORS</strong><br />
+D) KRYSIAK</p>
+<h3 id="25-algorytmy-kryptograficzne-oparte-na-sieciach-feistela-to"><a name="user-content-25-algorytmy-kryptograficzne-oparte-na-sieciach-feistela-to" href="#25-algorytmy-kryptograficzne-oparte-na-sieciach-feistela-to" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>25. Algorytmy kryptograficzne oparte na sieciach Feistela to</h3>
+<p>A) SHA<br />
+B) RSA<br />
+C) <strong>DES</strong><br />
+D) <strong>RC5</strong></p>
+<h3 id="26-przypisac-dugosc-kluczy-do-algorytmow-symetrycznych"><a name="user-content-26-przypisac-dugosc-kluczy-do-algorytmow-symetrycznych" href="#26-przypisac-dugosc-kluczy-do-algorytmow-symetrycznych" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>26. Przypisać długość kluczy do algorytmów symetrycznych</h3>
+<p>DES  - 56<br />
+IDEA - 128<br />
+3DES - 112<br />
+RC4 - 40,128<br />
+AES - 128, 192, 256<br />
+Blowfish - 32 - 448<br />
+rc6 &hellip;2048/128, 192 lub 256 (blokowy)<br />
+rc5 0&hellip;2040 (blokowy)</p>
+<h3 id="27-certyfikaty-kluczy-jawnych-rozwiazuja-problem"><a name="user-content-27-certyfikaty-kluczy-jawnych-rozwiazuja-problem" href="#27-certyfikaty-kluczy-jawnych-rozwiazuja-problem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>27. Certyfikaty kluczy jawnych rozwiązują problem</h3>
+<p>A) zapewnienia integralności danych<br />
+B) <strong>Uwierzytelniania klucza</strong><br />
+C) Dystrybucji klucza w szyfrowaniu symetrycznym<br />
+D) kontroli dostępu</p>
+<h3 id="28-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem"><a name="user-content-28-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem" href="#28-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>28. Potwierdzenie odbioru w przesyłce poczty tradycyjnej rozwiązuje problem</h3>
+<p>A) integralności<br />
+B) uwierzytelniania<br />
+C) <strong>niezaprzeczalności</strong><br />
+D) poufności</p>
+<h3 id="29-w-celu-zapewnienia-poufnosci-w-systemie-kryptograficznym-asymetrycznym-nalezy"><a name="user-content-29-w-celu-zapewnienia-poufnosci-w-systemie-kryptograficznym-asymetrycznym-nalezy" href="#29-w-celu-zapewnienia-poufnosci-w-systemie-kryptograficznym-asymetrycznym-nalezy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>29. W celu zapewnienia poufności w systemie kryptograficznym asymetrycznym należy:</h3>
+<p>A) wykonać szyfrowanie z kluczem jawnym nadawcy<br />
+B) <strong>wykonać szyfrowanie z kluczem jawnym odbiorcy</strong><br />
+C) wykonać szyfrowanie z kluczem prywatnym nadawcy <br />
+D) wykonać szyfrowanie z kluczem prywatnym odbiorcy</p>
+<h3 id="30-atakami-dos-opartymi-na-handshakeingu-tcp-sa"><a name="user-content-30-atakami-dos-opartymi-na-handshakeingu-tcp-sa" href="#30-atakami-dos-opartymi-na-handshakeingu-tcp-sa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>30. atakami DoS opartymi na handshakeingu TCP są:</h3>
+<p>A) <strong>Land.c</strong><br />
+B) Smurf<br />
+C) <strong>SYN Flood</strong><br />
+D) Ping od Death</p>
+<h3 id="31-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb"><a name="user-content-31-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb" href="#31-trybem-pracy-des-w-ktorym-mozliwe-jest-rownolege-szyfrowanie-wielu-blokow-jest-tryb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>31. Trybem pracy DES w którym możliwe jest równoległe szyfrowanie wielu bloków jest tryb</h3>
+<p>A) <strong>Elektronicznej książki kodowej</strong><br />
+B) Wiązania bloków<br />
+C) ze sprzężeniem zwrotnym<br />
+D) Ze sprzężeniem zwrotnym wyjściowym</p>
+<h3 id="32-zalecanym-i-najczesciej-stosowanym-trybem-pracy-des-jest-tryb"><a name="user-content-32-zalecanym-i-najczesciej-stosowanym-trybem-pracy-des-jest-tryb" href="#32-zalecanym-i-najczesciej-stosowanym-trybem-pracy-des-jest-tryb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>32. zalecanym i najcześciej stosowanym trybem pracy DES jest tryb</h3>
+<p>A) Elektronicznej książki kodowej<br />
+B) <strong>Wiązania bloków</strong><br />
+C) ze sprzężeniem zwrotnym<br />
+D) Ze sprzężeniem zwrotnym wyjściowym</p>
+<h3 id="33-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku"><a name="user-content-33-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku" href="#33-certyfikat-klucza-publicznego-trafia-na-liste-crl-w-przypadku" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>33. Certyfikat klucza publicznego trafia na listę CRL w przypadku</h3>
+<p>A) Ujawnienia klucza publicznego<br />
+B) Wygaśnięcia czasu ważności<br />
+C) <strong>Utraty klucza prywatnego</strong><br />
+D) <strong>Zastąpienia ważnego jeszcze certyfikatu nowym</strong></p>
+<h3 id="34-kryptoanalityk-przygotowa-liste-tekstow-jawnych-a-nastepnie-podstepem-skoni-jednego-z-wascicielo-tajnego-klucza-do-wygenerowania-i-przekazania-kryptogramow-tych-wiadomosci-najprawdopodobniej-atak-jaki-kryptoanalityk-moze-teraz-przeprowadzic-to-atak-typy"><a name="user-content-34-kryptoanalityk-przygotowa-liste-tekstow-jawnych-a-nastepnie-podstepem-skoni-jednego-z-wascicielo-tajnego-klucza-do-wygenerowania-i-przekazania-kryptogramow-tych-wiadomosci-najprawdopodobniej-atak-jaki-kryptoanalityk-moze-teraz-przeprowadzic-to-atak-typy" href="#34-kryptoanalityk-przygotowa-liste-tekstow-jawnych-a-nastepnie-podstepem-skoni-jednego-z-wascicielo-tajnego-klucza-do-wygenerowania-i-przekazania-kryptogramow-tych-wiadomosci-najprawdopodobniej-atak-jaki-kryptoanalityk-moze-teraz-przeprowadzic-to-atak-typy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>34. Kryptoanalityk przygotował listę tekstów jawnych a następnie podstępem skłonił jednego z właścicielo tajnego klucza do wygenerowania i przekazania kryptogramów tych wiadomości. Najprawdopodobniej atak, jaki kryptoanalityk może teraz przeprowadzić to atak typy:</h3>
+<p>A) ciphertextonly<br />
+B) Plaintext<br />
+C) <strong>Chosen plaintext</strong><br />
+D) Chosen ciphertext</p>
+<h3 id="35-w-algorytmach-symetrycznych-mozna-spotkac-operacje"><a name="user-content-35-w-algorytmach-symetrycznych-mozna-spotkac-operacje" href="#35-w-algorytmach-symetrycznych-mozna-spotkac-operacje" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>35. W algorytmach symetrycznych można spotkać operacje</h3>
+<p>A) modulo<br />
+B) <strong>XOR</strong><br />
+C) <strong>przesunięcie cykliczne</strong><br />
+D) potęgowanie</p>
+<h3 id="36-algorytm-kryptograficzny-bezwarunkowo-bezpieczny"><a name="user-content-36-algorytm-kryptograficzny-bezwarunkowo-bezpieczny" href="#36-algorytm-kryptograficzny-bezwarunkowo-bezpieczny" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>36. Algorytm kryptograficzny bezwarunkowo bezpieczny [&hellip;]</h3>
+<p><strong>NIGDY</strong></p>
+<h3 id="37-projekt-tempest-zajmuje-sie"><a name="user-content-37-projekt-tempest-zajmuje-sie" href="#37-projekt-tempest-zajmuje-sie" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>37. Projekt TEMPEST zajmuje się</h3>
+<p>A) bezpieczeństwem aplikacji<br />
+B) bezpieczeństwem protokołów routingu<br />
+C) podsłuchiwaniem traktów światłowodowych<br />
+D) <strong>emisją ujawniającą</strong></p>
+<h3 id="38-exploit-to-program-ktory"><a name="user-content-38-exploit-to-program-ktory" href="#38-exploit-to-program-ktory" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>38. Exploit to program który</h3>
+<p>A) umożliwia łamanie haseł<br />
+B) powiela się w systemie i blokuje zasoby<br />
+C) umożliwia łamanie szyfrów symetrycznych<br />
+D) <strong>wykorzystuje znane luki w aplikacji</strong></p>
+<h3 id="39-zaszyfrowac-wartosc-85-za-pomoca-algorytmu-rsa-z-kluczem-221"><a name="user-content-39-zaszyfrowac-wartosc-85-za-pomoca-algorytmu-rsa-z-kluczem-221" href="#39-zaszyfrowac-wartosc-85-za-pomoca-algorytmu-rsa-z-kluczem-221" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>39.  Zaszyfrować wartość 85 za pomocą algorytmu RSA z kluczem (2,21)</h3>
+<p>C = 85^2 mod 21 = <strong>1</strong></p>
+<h3 id="40-aby-zamac-des-metoda-brutalna-nalezy-sprawdzic-srednio"><a name="user-content-40-aby-zamac-des-metoda-brutalna-nalezy-sprawdzic-srednio" href="#40-aby-zamac-des-metoda-brutalna-nalezy-sprawdzic-srednio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>40.  aby złamać DES metodą brutalną należy sprawdzić średnio</h3>
+<p>A) 2^128 kluczy<br />
+B) <strong>2^55</strong><br />
+C) 55!<br />
+D) 56^2</p>
+<h3 id="41-bezpieczny-odpowiednik-telnetu"><a name="user-content-41-bezpieczny-odpowiednik-telnetu" href="#41-bezpieczny-odpowiednik-telnetu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>41. Bezpieczny odpowiednik TELNETU</h3>
+<p>A) PGP<br />
+B) SSL<br />
+C) <strong>SSH</strong><br />
+D) TLS</p>
+<h3 id="42-certyfikaty-klucza-publicznego-sa-podpisywane-przez"><a name="user-content-42-certyfikaty-klucza-publicznego-sa-podpisywane-przez" href="#42-certyfikaty-klucza-publicznego-sa-podpisywane-przez" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>42. Certyfikaty klucza publicznego są podpisywane przez</h3>
+<p>A) właściciela certyfikatu<br />
+B) znajomych właściciela certyfikatu<br />
+C) <strong>organ wydający certyfikaty</strong><br />
+D) serwer uwierzytelniający np RADIUS</p>
+<h3 id="43-po-odszyfrowaniu-odebranych-danych-algorytmem-rsa-swoim-kluczem-prywatnym-uzytkownika-a-otrzymano-wiadomosc-zakonczyem-prace-nad-projektem-uzytkownik-b-uzytkownik-a-moze-byc-pewny"><a name="user-content-43-po-odszyfrowaniu-odebranych-danych-algorytmem-rsa-swoim-kluczem-prywatnym-uzytkownika-a-otrzymano-wiadomosc-zakonczyem-prace-nad-projektem-uzytkownik-b-uzytkownik-a-moze-byc-pewny" href="#43-po-odszyfrowaniu-odebranych-danych-algorytmem-rsa-swoim-kluczem-prywatnym-uzytkownika-a-otrzymano-wiadomosc-zakonczyem-prace-nad-projektem-uzytkownik-b-uzytkownik-a-moze-byc-pewny" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>43. Po odszyfrowaniu odebranych danych algorytmem RSA swoim kluczem prywatnym użytkownika A otrzymano wiadomość: „Zakończyłem pracę nad projektem. Użytkownik B”. Użytkownik A może być pewny:</h3>
+<p>A) <strong>poufności wiadomości</strong><br />
+B) niezaprzeczalności<br />
+C) tożsamości nadawcy<br />
+D) integralności wiadomości</p>
+<h3 id="44-podpis-cyfrowy-oparty-na-algorytmie-symetrycznym-zapewnia"><a name="user-content-44-podpis-cyfrowy-oparty-na-algorytmie-symetrycznym-zapewnia" href="#44-podpis-cyfrowy-oparty-na-algorytmie-symetrycznym-zapewnia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>44. &lsquo;Podpis cyfrowy&rsquo; oparty na algorytmie symetrycznym zapewnia:</h3>
+<p>A) uwierzytelnienie źródła<br />
+B) <strong>niezaprzeczalność</strong><br />
+C) integralność<br />
+D) poufność</p>
+<h3 id="45-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem"><a name="user-content-45-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem" href="#45-potwierdzenie-odbioru-w-przesyce-poczty-tradycyjnej-rozwiazuje-problem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>45. „Potwierdzenie odbioru” w przesyłce poczty tradycyjnej rozwiązuje problem:</h3>
+<p>A) nienaruszalności<br />
+B) uwierzytelnienia<br />
+C) <strong>niezaprzeczalności</strong><br />
+D) poufności</p>
+<h3 id="46-skanowanie-portow-moze-byc-wykryte-przez"><a name="user-content-46-skanowanie-portow-moze-byc-wykryte-przez" href="#46-skanowanie-portow-moze-byc-wykryte-przez" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>46. Skanowanie portów może być wykryte przez:</h3>
+<p>A) filtr bezstanowy<br />
+B) <strong>filtr z badaniem stanów</strong><br />
+C) „czystą” bramę warstwy aplikacji<br />
+D) „czysty” serwer proxy</p>
+<h3 id="47-atak-dns-poisoning-wykorzystuje"><a name="user-content-47-atak-dns-poisoning-wykorzystuje" href="#47-atak-dns-poisoning-wykorzystuje" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>47. Atak DNS Poisoning wykorzystuje:</h3>
+<p>A) <strong>zapytanie rekurencyjne DNS</strong><br />
+B) zapytanie iteracyjne DNS<br />
+C) <strong>słabość zabezpieczeń DNSSEC</strong><br />
+D) mechanizm transferu stref</p>
+<h3 id="48-plik-hosts-zawiera"><a name="user-content-48-plik-hosts-zawiera" href="#48-plik-hosts-zawiera" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>48. Plik hosts zawiera:</h3>
+<p>A) <strong>listę zaufanych serwerów DNS</strong><br />
+B) <strong>listę hostów, z którymi można nawiązać połączenie</strong><br />
+C) listę zakupów :D<br />
+D) …</p>
+<h3 id="49-zadaniem-zapory-ogniowej-jest-blokowanie-wszystkich-pakietow-o-rozmiarze-wiekszym-od-10-kb-oraz-wszystkich-zadan-nawiazania-poaczenia-tcp-listami-acl-realizujacymi-to-zadanie-sa"><a name="user-content-49-zadaniem-zapory-ogniowej-jest-blokowanie-wszystkich-pakietow-o-rozmiarze-wiekszym-od-10-kb-oraz-wszystkich-zadan-nawiazania-poaczenia-tcp-listami-acl-realizujacymi-to-zadanie-sa" href="#49-zadaniem-zapory-ogniowej-jest-blokowanie-wszystkich-pakietow-o-rozmiarze-wiekszym-od-10-kb-oraz-wszystkich-zadan-nawiazania-poaczenia-tcp-listami-acl-realizujacymi-to-zadanie-sa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>49. Zadaniem zapory ogniowej jest blokowanie wszystkich pakietów o rozmiarze większym od 10 KB oraz wszystkich żądań nawiązania połączenia TCP. Listami ACL realizującymi to zadanie są:</h3>
+<p>A) <strong>blokuj pakiety większe od 10 KB<br />
+blokuj pakiety z bitem SYN</strong><br />
+B) przepuść pakiety mniejsze od 10 KB<br />
+blokuj pakiety z bitem SYN<br />
+C) blokuj pakiety z bitem SYN<br />
+przepuść pakiety mniejsze od 10 KB<br />
+D) <strong>blokuj pakiety z bitem SYN<br />
+blokuj pakiety większe od 10 KB</strong></p>
+<h3 id="51-uozyc-liste-acl-w-notacji-ip-z-dzikimi-maskami-speniajaca-nastepujace-wymagania-dopuszczamy-komunikacje-z-hostami-o-adresach-101000-1010255255-z-wyaczeniem-podsieci-1010100-101010255-oraz-adresu-101017136-blokujemy-wszelka-inna-komunikacje"><a name="user-content-51-uozyc-liste-acl-w-notacji-ip-z-dzikimi-maskami-speniajaca-nastepujace-wymagania-dopuszczamy-komunikacje-z-hostami-o-adresach-101000-1010255255-z-wyaczeniem-podsieci-1010100-101010255-oraz-adresu-101017136-blokujemy-wszelka-inna-komunikacje" href="#51-uozyc-liste-acl-w-notacji-ip-z-dzikimi-maskami-speniajaca-nastepujace-wymagania-dopuszczamy-komunikacje-z-hostami-o-adresach-101000-1010255255-z-wyaczeniem-podsieci-1010100-101010255-oraz-adresu-101017136-blokujemy-wszelka-inna-komunikacje" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>51. Ułożyć listę ACL w notacji IP (z „dzikimi maskami”), spełniającą następujące wymagania: - dopuszczamy komunikację z hostami o adresach 10.10.0.0 ÷ 10.10.255.255 z wyłączeniem podsieci 10.10.10.0 ÷ 10.10.10.255 oraz adresu 10.10.17.136- blokujemy wszelką inną komunikację</h3>
+<p>10.10.0.0 ------- 0.0.255.255 ------- zezwalaj<br />
+10.10.10.0 ------- 0.0.0.255 ------- blokuj<br />
+10.10.17.136 ------- 0.0.0.0 ------- blokuj<br />
+0.0.0.0 ------- 255.255.255.255 ------- blokuj</p>
+<h3 id="52-etykietowanie-danych-tajne-poufneitd-jest-wymagane-na-poziomach-tcsec"><a name="user-content-52-etykietowanie-danych-tajne-poufneitd-jest-wymagane-na-poziomach-tcsec" href="#52-etykietowanie-danych-tajne-poufneitd-jest-wymagane-na-poziomach-tcsec" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>52. Etykietowanie danych („tajne”, „poufne”,itd.) jest wymagane na poziomach TCSEC:</h3>
+<p>A) <strong>A</strong><br />
+B) <strong>B</strong><br />
+C) C<br />
+D) D</p>
+<h3 id="53-polityka-bezpieczenstwa"><a name="user-content-53-polityka-bezpieczenstwa" href="#53-polityka-bezpieczenstwa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>53. Polityka Bezpieczeństwa</h3>
+<p>A) <strong>jest dokumentem definiującym strategię bezpieczeństwa firmy/instytucji</strong><br />
+B) wskazuje konkretne narzędzi, które ma zostać zastosowane w systemie bezpieczeństwa, jednak nie<br />
+opisuje jego konfiguracji<br />
+C) jest dokumentem tajnym<br />
+D) <strong>powinna być jak najczęściej uaktualniana</strong></p>
+<h3 id="54-w-schemacie-kryptograficznym-nazywanym-hybrydowym"><a name="user-content-54-w-schemacie-kryptograficznym-nazywanym-hybrydowym" href="#54-w-schemacie-kryptograficznym-nazywanym-hybrydowym" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>54. W schemacie kryptograficznym nazywanym &lsquo;hybrydowym&rsquo;:</h3>
+<p>A) Wszystkie przesłane informacje są zaszyfrowane algorytmem symetrycznym<br />
+B) Wszystkie przesłane informacje są zaszyfrowane algorytmem asymetrycznym<br />
+C) <strong>Dane użytkownika są zaszyfrowane algorytmem symetrycznym a hasła asymetrycznym</strong><br />
+D) Dane użytkownika są hashowane i nie szyfrowane a hasła są szyfrowane algorytmem<br />
+symetrycznym</p>
+<h3 id="55-certyfikat-ssl"><a name="user-content-55-certyfikat-ssl" href="#55-certyfikat-ssl" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>55. Certyfikat SSL:</h3>
+<p>A) Poświadcza, że osoba fizyczna będąca właścicielem certyfikatu używa podanego w certyfikacie<br />
+klucza publicznego<br />
+B) Poświadcza, że serwer o podanej w certyfikacie nazwie domenowej używa podanego w<br />
+certyfikacie klucza prywatnego<br />
+C) Poświadcza, że dany klucz publiczny jest związany z określonym adresem IP witryny internetowej<br />
+D) <strong>Poświadcza, że serwer o podanej w certyfikacie nazwie domenowej używa podanego w<br />
+certyfikacie klucza publicznego</strong></p>
+<h3 id="56-na-zamanie-szyfru-wyspecjalizowany-klaster-serwerow-potrzebowaby-100-tysiecy-lat-schemat-szyfrujacy-jest"><a name="user-content-56-na-zamanie-szyfru-wyspecjalizowany-klaster-serwerow-potrzebowaby-100-tysiecy-lat-schemat-szyfrujacy-jest" href="#56-na-zamanie-szyfru-wyspecjalizowany-klaster-serwerow-potrzebowaby-100-tysiecy-lat-schemat-szyfrujacy-jest" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>56. Na złamanie szyfru wyspecjalizowany klaster serwerów potrzebowałby 100 tysięcy lat. Schemat szyfrujący jest:</h3>
+<p>A) Względnie bezpieczny<br />
+B) <strong>Obliczeniowo bezpieczny</strong><br />
+C) Nie bezpieczny<br />
+D) Bezwarunkowo bezpieczny</p>
+<h3 id="57-klucz-algorytmu-szyfrujacego-skada-sie-z-dwoch-liter-alfabetu-angielskiego26-znakow-oraz-trzech-cyfr-liczba-roznych-kluczy-wynosi"><a name="user-content-57-klucz-algorytmu-szyfrujacego-skada-sie-z-dwoch-liter-alfabetu-angielskiego26-znakow-oraz-trzech-cyfr-liczba-roznych-kluczy-wynosi" href="#57-klucz-algorytmu-szyfrujacego-skada-sie-z-dwoch-liter-alfabetu-angielskiego26-znakow-oraz-trzech-cyfr-liczba-roznych-kluczy-wynosi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>57. Klucz algorytmu szyfrującego składa się z dwóch liter alfabetu angielskiego(26 znaków) oraz trzech cyfr. Liczba różnych kluczy wynosi:</h3>
+<p>A) 82<br />
+B) 100 000<br />
+C) <strong>676 000</strong> (26^2 x 10^3)<br />
+D) 52 000</p>
+<h3 id="58-metoda-brutalna-pozwala-na-odkrycie-tresci-zaszyfrowanego-komunikatu-w-wyniku"><a name="user-content-58-metoda-brutalna-pozwala-na-odkrycie-tresci-zaszyfrowanego-komunikatu-w-wyniku" href="#58-metoda-brutalna-pozwala-na-odkrycie-tresci-zaszyfrowanego-komunikatu-w-wyniku" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>58. ‘Metoda brutalna’ pozwala na odkrycie treści zaszyfrowanego komunikatu w wyniku:</h3>
+<p>A) Analizy statystycznej<br />
+B) Kradzieży klucza<br />
+C) Zmuszenia użytkownika siłą do wyjawienia klucza<br />
+D) <strong>Sprawdzenia wszystkich możliwych kluczy</strong></p>
+<h3 id="59-algorytmami-strumieniowymi-sa"><a name="user-content-59-algorytmami-strumieniowymi-sa" href="#59-algorytmami-strumieniowymi-sa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>59. Algorytmami strumieniowymi są:</h3>
+<p>A) IDEA<br />
+B) DES<br />
+C) <strong>RC4</strong><br />
+D) <strong>DES w trybie ze sprzężeniem zwrotnym</strong></p>
+<h3 id="60-3des-to-szyfrowanie"><a name="user-content-60-3des-to-szyfrowanie" href="#60-3des-to-szyfrowanie" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>60. 3DES to szyfrowanie:</h3>
+<p>A) 3krotne z jednym kluczem<br />
+B) <strong>3krotne z dwoma kluczami</strong><br />
+C) 3krotne z trzema kluczami<br />
+D) 1krotne z trzykrotnie dłuższym kluczem</p>
+<h3 id="61-rozmiar-bloku-des-wynosi"><a name="user-content-61-rozmiar-bloku-des-wynosi" href="#61-rozmiar-bloku-des-wynosi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>61. Rozmiar bloku DES wynosi:</h3>
+<p>A) <strong>64 bity</strong><br />
+B) 56 bitów<br />
+C) 64 bajty<br />
+D) 56 bajtów</p>
+<h3 id="62-dugosc-klucza-idea-wynosi"><a name="user-content-62-dugosc-klucza-idea-wynosi" href="#62-dugosc-klucza-idea-wynosi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>62. Długość klucza IDEA wynosi:</h3>
+<p>A) 64 bity<br />
+B) 56 bitów<br />
+C) <strong>128 bitów</strong><br />
+D) Max. 256 bitów</p>
+<h3 id="63-kazdy-sblok-algorytmu-des-ma"><a name="user-content-63-kazdy-sblok-algorytmu-des-ma" href="#63-kazdy-sblok-algorytmu-des-ma" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>63. Każdy Sblok algorytmu DES ma:</h3>
+<p>A) 4bitowe wejście i 6bitowe wyjście<br />
+B) 6bitowe wejście i 6bitowe wyjście<br />
+C) 4bitowe wejście i 4bitowe wyjście<br />
+D) <strong>6bitowe wejście i 4bitowe wyjście</strong></p>
+<h3 id="64-finalistami-aes-sa"><a name="user-content-64-finalistami-aes-sa" href="#64-finalistami-aes-sa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>64. Finalistami AES są:</h3>
+<p>A) <strong>RC6</strong><br />
+B) IDEA<br />
+C) <strong>Rijndael</strong><br />
+D) Blowfish</p>
+<h3 id="65-liczba-rund-aes-zalezy-od"><a name="user-content-65-liczba-rund-aes-zalezy-od" href="#65-liczba-rund-aes-zalezy-od" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>65. Liczba rund AES zależy od:</h3>
+<p>A) Liczby bijekcji w każdej rundzie<br />
+B) <strong>Długości bloku</strong><br />
+C) <strong>Długości klucza</strong><br />
+D) Wielkości macierzy stanu</p>
+<h3 id="66-rc5"><a name="user-content-66-rc5" href="#66-rc5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>66. RC5:</h3>
+<p>A) <strong>Jest algorytmem blokowym</strong><br />
+B) <strong>Operuje na połówkach bloku</strong><br />
+C) Operuje na ćwiartkach bloku<br />
+D) Umożliwia zastosowanie klucza o długości do 128 bitów</p></article></body></html>
