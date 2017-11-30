@@ -1,0 +1,1293 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>PZJ</title></head><body><article class="markdown-body"><h1 id="podstawy-zarzadzania-jakoscia"><a name="user-content-podstawy-zarzadzania-jakoscia" href="#podstawy-zarzadzania-jakoscia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Podstawy zarządzania jakością</h1>
+<h3 id="1-w-swiecie-gospodarczym-xxi-wieku-sa-pewne-reguy-ktora-z-nich-obecnie-jest-priorytetowa-problem-prosze-rozpatrzyc-na-tle-innych-regu-gospodarowania"><a name="user-content-1-w-swiecie-gospodarczym-xxi-wieku-sa-pewne-reguy-ktora-z-nich-obecnie-jest-priorytetowa-problem-prosze-rozpatrzyc-na-tle-innych-regu-gospodarowania" href="#1-w-swiecie-gospodarczym-xxi-wieku-sa-pewne-reguy-ktora-z-nich-obecnie-jest-priorytetowa-problem-prosze-rozpatrzyc-na-tle-innych-regu-gospodarowania" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. W świecie gospodarczym XXI wieku są pewne reguły. Która z nich obecnie jest priorytetowa? Problem proszę rozpatrzyć na tle innych reguł gospodarowania.</h3>
+<p><strong>Wiedza</strong><br />
+<strong>Technologia cyfrowa</strong><br />
+<strong>Organizacja wirtualna</strong></p>
+<h3 id="2-prosze-podac-trzy-charakterystyczne-dla-swiata-gospodarczego-style-zarzadzania-jakoscia-oparte-na-filozofii-starozytnej-platona-arystotelesa-i-tao-tsu"><a name="user-content-2-prosze-podac-trzy-charakterystyczne-dla-swiata-gospodarczego-style-zarzadzania-jakoscia-oparte-na-filozofii-starozytnej-platona-arystotelesa-i-tao-tsu" href="#2-prosze-podac-trzy-charakterystyczne-dla-swiata-gospodarczego-style-zarzadzania-jakoscia-oparte-na-filozofii-starozytnej-platona-arystotelesa-i-tao-tsu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Proszę podać trzy charakterystyczne dla świata gospodarczego style zarządzania jakością oparte na filozofii starożytnej Platona, Arystotelesa i Tao Tsu.</h3>
+<p>Filozofia Platona - styl amerykański, oparty na marketingu [klient]<br />
+Filozofia Arystotelesa - styl europejski, oparty na normach [norma]<br />
+Filozofia Tao Tsu - styl japoński, oparty na ciągłym doskonaleniu [działanie człowieka, przedsiębiorczość] (Kaizen)</p>
+<h3 id="3-podstawowe-pojecia-zwiazane-z-jakoscia-i-przedsiebiorczoscia-omawiane-na-wykadzie"><a name="user-content-3-podstawowe-pojecia-zwiazane-z-jakoscia-i-przedsiebiorczoscia-omawiane-na-wykadzie" href="#3-podstawowe-pojecia-zwiazane-z-jakoscia-i-przedsiebiorczoscia-omawiane-na-wykadzie" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Podstawowe pojęcia związane z jakością i przedsiębiorczością omawiane na wykładzie?</h3>
+<p><strong>Organizacja</strong> - osoba lub grupa osób (z przypisanymi uprawnieniami i odpowiedzialnością), dążąca do osiągnięcia swoich celów. Przykłady: instytucja, uczelnia, firma, korporacja, spółka, stowarzyszenie, samodzielny handlowiec</p>
+<p><strong>Kontekst organizacji</strong> - kombinacja czynników wewnętrznych i zewnętrznych, która może wpływać na ustalanie celów przez organizację i dążenie do nich </p>
+<p><strong>Zarządzanie</strong> - skoordynowane działania dotyczące kierowania organizacją i jej nadzorowania</p>
+<p><strong>Skuteczność</strong> - stopień osiągnięcia celu</p>
+<p><strong>Efektywność</strong> - relacja między wykorzystanymi zasobami a  osiągniętymi wynikami </p>
+<p><strong>Zarządzanie jakością</strong> - część zarządzania w odniesieniu do jakości</p>
+<p><strong>Planowanie jakości</strong> - część zarządzania ukierunkowana na ustalenie celów jakościowych, niezbędnych procesów i zasobów</p>
+<p><strong>Sterowanie jakością</strong> -  część zarządzania ukierunkowana na spełnienie wymagań jakościowych</p>
+<p><strong>Zapewnienie jakości</strong> - część zarządzania ukierunkowana na zapewnienie zaufania, że wymagania jakości będą spełnione</p>
+<p><strong>Doskonalenie jakości</strong> - część zarządzania ukierunkowana na zwiększenie zdolności do spełniania wymagań jakościowych</p>
+<p><strong>Przedsiębiorca</strong> - osoba, która:</p>
+<ul>
+<li>zakłada przedsiębiorstwo (funkcja założycielska)</li>
+<li>prowadzi przedsiębiorstwo (funkcja zarządzania)</li>
+<li>ponosi ryzyko (funkcja finansowa, prawna i społeczna)</li>
+</ul>
+<h3 id="4-co-moze-byc-obiektem-jakosci"><a name="user-content-4-co-moze-byc-obiektem-jakosci" href="#4-co-moze-byc-obiektem-jakosci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. Co może być obiektem jakości?</h3>
+<p><strong>Obiekt</strong> – jednostka, element, cokolwiek dostrzegalnego i wyobrażalnego. </p>
+<p>Obiekty mogą być:</p>
+<ul>
+<li>materialne, </li>
+<li>niematerialne</li>
+<li>wyobrażone (np. stan uczelni w przyszłości)</li>
+</ul>
+<p>Obiektem jest: wyrób, usługa, proces, osoba, organizacja, system, zasób.</p>
+<h3 id="5-w-jaki-sposob-jest-postrzegana-jakosc"><a name="user-content-5-w-jaki-sposob-jest-postrzegana-jakosc" href="#5-w-jaki-sposob-jest-postrzegana-jakosc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. W jaki sposób jest postrzegana jakość?</h3>
+<p><strong>Jakość</strong> jest postrzegana poprzez:</p>
+<ul>
+<li>zbiór inherentnych właściwości</li>
+<li>przydatność użytkową</li>
+<li>zgodność ze specyfikacją</li>
+<li>stopień zbliżenia do doskonałości</li>
+</ul>
+<h3 id="6-co-znaczy-termin-przedsiebiorczosc"><a name="user-content-6-co-znaczy-termin-przedsiebiorczosc" href="#6-co-znaczy-termin-przedsiebiorczosc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. Co znaczy termin ‘przedsiębiorczość’?</h3>
+<p><strong>Przedsiębiorczość</strong> rozumiana jest w trzech znaczeniach: </p>
+<ul>
+<li>Przedsiębiorczość jako postawa - aktywne, twórcze dążenie do korzyści</li>
+<li>Przedsiębiorczość jako zachowanie - umiejętność wykorzystania pomysłów, okazji, których nie dostrzegają inni</li>
+<li>Przedsiębiorczość jako proces - logiczne, kolejne fazy postępowania w działaniach mogących przynieść korzyści</li>
+</ul>
+<h3 id="7-pojecie-jakosci-miesci-w-sobie-wasciwosci-inherentne-i-przypisane-prosze-je-rozroznic-takze-na-przykadach"><a name="user-content-7-pojecie-jakosci-miesci-w-sobie-wasciwosci-inherentne-i-przypisane-prosze-je-rozroznic-takze-na-przykadach" href="#7-pojecie-jakosci-miesci-w-sobie-wasciwosci-inherentne-i-przypisane-prosze-je-rozroznic-takze-na-przykadach" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7. Pojęcie jakości mieści w sobie właściwości inherentne i przypisane. Proszę je rozróżnić, także na przykładach.</h3>
+<p>właściwość <strong>inherentna</strong> - istniejąca sama w sobie, wbudowana, nieodłączna (np. zużycie paliwa w samochodzie)<br />
+właściwość <strong>przypisana</strong> - cecha przypisana do wyrobu (np. cena samochodu, właściciel)</p>
+<h3 id="8-jakie-moga-byc-wasciwosci-wyrobuusugi"><a name="user-content-8-jakie-moga-byc-wasciwosci-wyrobuusugi" href="#8-jakie-moga-byc-wasciwosci-wyrobuusugi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8. Jakie mogą być właściwości wyrobu/usługi?</h3>
+<p><strong>Fizyczne</strong> (właściwości mechaniczne, elektryczne, chemiczne, biologiczne itp.)<br />
+<strong>Funkcjonalne</strong> (np. maksymalna prędkość samochodu)<br />
+<strong>Ergonomiczne</strong> (właściwości związane ze zdrowiem i  bezpieczeństwem)<br />
+<strong>Dotyczące zmysłów</strong> (związane z zapachem, dotykiem, smakiem, słuchem itp.)<br />
+<strong>Behawioralne</strong> (np. uprzejmość, prawdomówność, uczciwość)<br />
+<strong>Czasowe</strong> (np. punktualność, niezawodność, dostępność)</p>
+<h3 id="9-jak-sa-rozumiane-jakosc-typu-projektu-i-wykonania"><a name="user-content-9-jak-sa-rozumiane-jakosc-typu-projektu-i-wykonania" href="#9-jak-sa-rozumiane-jakosc-typu-projektu-i-wykonania" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9. Jak są rozumiane jakość typu (projektu) i wykonania?</h3>
+<p>Jakość <strong>typu</strong> – stopień zgodności wyrobu, który ma być produkowany, z wymaganiami i oczekiwaniami klientów (model produktu).<br />
+Jakość <strong>wykonania</strong> – stopień zgodności wytworzonego produktu z przyjętym wzorcem (modelem).</p>
+<h3 id="10-z-jakimi-rodzajami-bedow-mamy-do-czynienia-w-procesach-gospodarczych"><a name="user-content-10-z-jakimi-rodzajami-bedow-mamy-do-czynienia-w-procesach-gospodarczych" href="#10-z-jakimi-rodzajami-bedow-mamy-do-czynienia-w-procesach-gospodarczych" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10. Z jakimi rodzajami błędów mamy do czynienia w procesach gospodarczych?</h3>
+<ul>
+<li>marketingowe</li>
+<li>rozwojowe (ryzyka postępu)</li>
+<li>projektowania</li>
+<li>wykonania</li>
+<li>informacyjne</li>
+<li>zarządzania</li>
+</ul>
+<h3 id="11-na-czym-polega-bad-ryzyka-postepu-zwany-takze-bedem-rozwojowym-prosze-podac-przykady"><a name="user-content-11-na-czym-polega-bad-ryzyka-postepu-zwany-takze-bedem-rozwojowym-prosze-podac-przykady" href="#11-na-czym-polega-bad-ryzyka-postepu-zwany-takze-bedem-rozwojowym-prosze-podac-przykady" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11. Na czym polega błąd ryzyka postępu, zwany także błędem rozwojowym? Proszę podać przykłady.</h3>
+<p>Dotyczą tych właściwości produktu, które w danym momencie są uznawane za zgodne z wymaganiami dotyczącymi jakości i bezpieczeństwa, a po pewnym czasie, na skutek rozwoju nauki i techniki, są uważane za niebezpieczne.</p>
+<p><strong>Przykłady</strong>: rakotwórczy azbest wykorzystywany jako budulec termoizolacyjny, tytoń (uważany w przeszłości za nieszkodliwy), masowe sprzedawanie opium jako środka przeciwbólowego</p>
+<h3 id="12-jaka-jest-wspoczesna-priorytetowa-cecha-jakosci"><a name="user-content-12-jaka-jest-wspoczesna-priorytetowa-cecha-jakosci" href="#12-jaka-jest-wspoczesna-priorytetowa-cecha-jakosci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>12. Jaka jest współczesna priorytetowa cecha jakości?</h3>
+<p><strong>Bezpieczeństwo użytkownika</strong></p>
+<h3 id="13-jakie-sa-obecne-trendy-w-gospodarce-swiatowej"><a name="user-content-13-jakie-sa-obecne-trendy-w-gospodarce-swiatowej" href="#13-jakie-sa-obecne-trendy-w-gospodarce-swiatowej" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>13. Jakie są obecne trendy w gospodarce światowej?</h3>
+<ul>
+<li>
+<p>Kierunki w podejściu do jakości (tworzenie  i dostarczanie wartości dla klienta w procesach,  dążenie do zrównoważenia rozwoju gospodarczego, odpowiedzialność społeczna organizacji, kapitał duchowy w biznesie).</p>
+</li>
+<li>
+<p>Nowe podejście do pojęcia produktu wadliwego (bezpieczeństwo produktu, odpowiedzialność przedsiębiorcy za produkt, ochrona środowiska naturalnego, poszanowanie zasobów Ziemi). </p>
+</li>
+<li>
+<p>Postęp w innowacjach produktowych, i procesowych i organizacyjnych, a także skrócenie czasu wprowadzenia innowacji na rynek. Rosnąca presja na obniżenie kosztów.</p>
+</li>
+</ul>
+<h3 id="14-co-powinna-mierzyc-organizacja-w-odniesieniu-do-klienta"><a name="user-content-14-co-powinna-mierzyc-organizacja-w-odniesieniu-do-klienta" href="#14-co-powinna-mierzyc-organizacja-w-odniesieniu-do-klienta" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>14. Co powinna mierzyć organizacja w odniesieniu do klienta?</h3>
+<p><strong>Poziom zadowolenia</strong> klienta/konsumenta.</p>
+<h3 id="15-do-czego-suzy-model-kano"><a name="user-content-15-do-czego-suzy-model-kano" href="#15-do-czego-suzy-model-kano" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>15. Do czego służy model Kano?</h3>
+<p>To narzędzie służące zrozumieniu wymagań (potrzeb) klienta/konsumenta.</p>
+<h3 id="16-jak-jest-rozumiane-oczarowanie-klienta-i-kto-wymysli-taki-termin"><a name="user-content-16-jak-jest-rozumiane-oczarowanie-klienta-i-kto-wymysli-taki-termin" href="#16-jak-jest-rozumiane-oczarowanie-klienta-i-kto-wymysli-taki-termin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16. Jak jest rozumiane OCZAROWANIE klienta i kto wymyślił taki termin?</h3>
+<p>Oczarowanie to <strong>poziom atrakcyjności</strong> produktu postrzegany przez klienta.<br />
+Termin zaproponowany przez - <strong>Noriaki Kano</strong>, w ramach modelu Kano.</p>
+<h3 id="17-kogo-nazywa-sie-prosumentem"><a name="user-content-17-kogo-nazywa-sie-prosumentem" href="#17-kogo-nazywa-sie-prosumentem" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>17. Kogo nazywa się prosumentem?</h3>
+<p>Klienta, który wszedł w rolę producenta (uczestniczy w projektowaniu, kontroli i badaniach).</p>
+<h3 id="18-wymien-podstawowe-cechy-przywodcze"><a name="user-content-18-wymien-podstawowe-cechy-przywodcze" href="#18-wymien-podstawowe-cechy-przywodcze" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>18. Wymień podstawowe cechy przywódcze.</h3>
+<ul>
+<li>mądrość</li>
+<li>charyzma (zdolność do przekonywania innych do swoich idei i celów)</li>
+<li>altruizm</li>
+<li>życie dla innych</li>
+<li>postawa osobista</li>
+<li>osiągnięcia z przeszłości</li>
+</ul>
+<h3 id="19-jakie-tresci-zawiera-cykl-shewharta-deminga"><a name="user-content-19-jakie-tresci-zawiera-cykl-shewharta-deminga" href="#19-jakie-tresci-zawiera-cykl-shewharta-deminga" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>19. Jakie treści zawiera cykl Shewharta-Deminga?</h3>
+<p><strong>PDCA (Plan, Do, Check, Act)</strong></p>
+<ul>
+<li>Zaplanuj:<ul>
+<li>Co? (określenie problemu, analiza problemu)</li>
+<li>Dlaczego? (identyfikacja przyczyn)</li>
+<li>Jak? (planowanie przeciwdziałań</li>
+</ul>
+</li>
+<li>Wykonaj -&gt; wdrożenie</li>
+<li>Sprawdź -&gt; potwierdzenie wyników</li>
+<li>Działaj</li>
+</ul>
+<h3 id="20-co-nazywamy-procesem-i-co-nalezy-robic-w-tym-zakresie"><a name="user-content-20-co-nazywamy-procesem-i-co-nalezy-robic-w-tym-zakresie" href="#20-co-nazywamy-procesem-i-co-nalezy-robic-w-tym-zakresie" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>20. Co nazywamy ‘procesem’ i co należy robić w tym zakresie?</h3>
+<p><strong>Proces</strong> – zbiór działań wzajemnie powiązanych lub wzajemnie oddziałujących, które przekształcają wejścia w wyjścia.</p>
+<h3 id="21-co-decyduje-o-sprawnosci-dziaan-czowieka-w-organizacji"><a name="user-content-21-co-decyduje-o-sprawnosci-dziaan-czowieka-w-organizacji" href="#21-co-decyduje-o-sprawnosci-dziaan-czowieka-w-organizacji" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>21. Co decyduje o sprawności działań człowieka w organizacji?</h3>
+<p>O sprawności działań człowieka decyduje wiedza (wiem jak to się robi), umiejętności  (potrafię to zrobić), motywacja (chcę to robić).</p>
+<h3 id="22-jakie-elementy-skadowe-zawiera-proces-w-triadzie-jurana"><a name="user-content-22-jakie-elementy-skadowe-zawiera-proces-w-triadzie-jurana" href="#22-jakie-elementy-skadowe-zawiera-proces-w-triadzie-jurana" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>22. Jakie elementy składowe zawiera proces w triadzie Jurana.</h3>
+<ul>
+<li>planowanie jakością</li>
+<li>sterowanie jakością</li>
+<li>doskonalenie jakości</li>
+</ul>
+<h3 id="23-co-powinna-zrobic-organizacja-gdy-wystepuja-w-jej-funkcjonowaniu-bedy-chroniczne-systemowe-wg-jurana"><a name="user-content-23-co-powinna-zrobic-organizacja-gdy-wystepuja-w-jej-funkcjonowaniu-bedy-chroniczne-systemowe-wg-jurana" href="#23-co-powinna-zrobic-organizacja-gdy-wystepuja-w-jej-funkcjonowaniu-bedy-chroniczne-systemowe-wg-jurana" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>23. Co powinna zrobić organizacja, gdy występują w jej funkcjonowaniu błędy chroniczne (systemowe) – wg Jurana.</h3>
+<p>Zmienić system zarządzania.</p>
+<h3 id="24-co-jestem-podstawowym-celem-koncepcji-tqm"><a name="user-content-24-co-jestem-podstawowym-celem-koncepcji-tqm" href="#24-co-jestem-podstawowym-celem-koncepcji-tqm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>24. Co jestem podstawowym celem koncepcji TQM?</h3>
+<p>TQM = <strong>Total Quality Management</strong>, &ldquo;Zarządzanie przez jakość&rdquo;. Celem koncepcji jest pobudzenie ludzi do działania. W ramach TQM wypracowano wiele technik i metod umożliwiających doskonalenie zarządzania organizacjami.</p>
+<h3 id="25-dlaczego-nie-mozemy-polegac-na-kontroli-jakosci-dotyczacej-wykrywania-bedow-w-organizacji-wg-deminga"><a name="user-content-25-dlaczego-nie-mozemy-polegac-na-kontroli-jakosci-dotyczacej-wykrywania-bedow-w-organizacji-wg-deminga" href="#25-dlaczego-nie-mozemy-polegac-na-kontroli-jakosci-dotyczacej-wykrywania-bedow-w-organizacji-wg-deminga" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>25. Dlaczego nie możemy polegać na kontroli jakości dotyczącej wykrywania błędów w organizacji (wg Deminga).</h3>
+<p>Jakości nie da się osiągnąć poprzez kontrolę, jakość musi powstać w całym procesie wytwarzania, być „wbudowania w procesy”. Zapobiegaj pomyłkom (błędom) zamiast je wykrywać.</p>
+<h3 id="26-co-jest-standardem-jakosci-wg-crosbyego-jak-jest-nazywana-jego-koncepcja"><a name="user-content-26-co-jest-standardem-jakosci-wg-crosbyego-jak-jest-nazywana-jego-koncepcja" href="#26-co-jest-standardem-jakosci-wg-crosbyego-jak-jest-nazywana-jego-koncepcja" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>26. Co jest standardem jakości wg Crosby’ego? Jak jest nazywana jego koncepcja?</h3>
+<p>Standardem jakości jest dążenie do bezbłędności. Koncepcja to <strong>“Zero defects”</strong>.</p>
+<h3 id="27-czego-dotyczy-funkcja-strat-jakosci-jako-koncepcja-taguchi"><a name="user-content-27-czego-dotyczy-funkcja-strat-jakosci-jako-koncepcja-taguchi" href="#27-czego-dotyczy-funkcja-strat-jakosci-jako-koncepcja-taguchi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>27. Czego dotyczy &lsquo;funkcja strat jakości jako koncepcja Taguchi?</h3>
+<p>Według niej wyrób całkowicie zgodny z wymaganiami i oczekiwaniami klienta ma wysoką jakość a jakiekolwiek odchylenie od tych wymagań powoduje straty dla producenta.</p>
+<h3 id="28-co-zawiera-model-ohno"><a name="user-content-28-co-zawiera-model-ohno" href="#28-co-zawiera-model-ohno" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>28. Co zawiera model Ohno?</h3>
+<p>Jest to model siedmiu rodzajów marnotrawca. Są to:</p>
+<ul>
+<li>Nadprodukcja</li>
+<li>Oczekiwanie (na opóźnione dostawy, informacje, dokumenty)</li>
+<li>Zbędny transport</li>
+<li>Zbędne magazynowanie</li>
+<li>Nieodpowiednie przygotowanie produkcji</li>
+<li>Nieodpowiednie przygotowanie stanowiska pracy</li>
+<li>Błędy  (wszelkiego rodzaju, np. w dokumentacji produkcyjnej, usterki)</li>
+</ul>
+<h3 id="29-z-jakimi-charakterystycznymi-okresleniami-mamy-do-czynienia-w-normalizacji"><a name="user-content-29-z-jakimi-charakterystycznymi-okresleniami-mamy-do-czynienia-w-normalizacji" href="#29-z-jakimi-charakterystycznymi-okresleniami-mamy-do-czynienia-w-normalizacji" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>29. Z jakimi charakterystycznymi określeniami mamy do czynienia w normalizacji?</h3>
+<p>Uporządkowanie, ujednolicenie, występujących w świecie gospodarczo-społecznym różnorodności.</p>
+<h3 id="30-z-jaka-regua-wiaze-sie-pojecie-normy"><a name="user-content-30-z-jaka-regua-wiaze-sie-pojecie-normy" href="#30-z-jaka-regua-wiaze-sie-pojecie-normy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>30. Z jaką regułą wiąże się pojęcie normy?</h3>
+<p>Norma to reguła powszechnie przyjęta.</p>
+<h3 id="31-normy-sa-obligatoryjne-obowiazkowe-czy-fakultatywne-nieobowiazkowe"><a name="user-content-31-normy-sa-obligatoryjne-obowiazkowe-czy-fakultatywne-nieobowiazkowe" href="#31-normy-sa-obligatoryjne-obowiazkowe-czy-fakultatywne-nieobowiazkowe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>31. Normy są obligatoryjne (obowiązkowe), czy fakultatywne (nieobowiązkowe)?</h3>
+<p>Normy są fakultatywne</p>
+<h3 id="32-czym-rozni-sie-norma-od-przepisu-technicznego"><a name="user-content-32-czym-rozni-sie-norma-od-przepisu-technicznego" href="#32-czym-rozni-sie-norma-od-przepisu-technicznego" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>32. Czym różni się norma od przepisu technicznego?</h3>
+<p>Przepisy techniczne są obligatoryjne a normy - fakultatywne.</p>
+<h3 id="33-czego-dotycza-normy-iso-serii-9000"><a name="user-content-33-czego-dotycza-normy-iso-serii-9000" href="#33-czego-dotycza-normy-iso-serii-9000" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>33. Czego dotyczą normy ISO serii 9000?</h3>
+<p>Dotyczą one systemu jakości a nie wyrobu.</p>
+<h3 id="34-co-jest-charakterystyczne-w-normie-iso-9001"><a name="user-content-34-co-jest-charakterystyczne-w-normie-iso-9001" href="#34-co-jest-charakterystyczne-w-normie-iso-9001" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>34. Co jest charakterystyczne w normie ISO 9001?</h3>
+<p>wymagania dla systemów zarządzania jakością</p>
+<h3 id="35-co-oznacza-wdrozenie-normy-iso-9001-do-organizacji-przedsiebiorstwa"><a name="user-content-35-co-oznacza-wdrozenie-normy-iso-9001-do-organizacji-przedsiebiorstwa" href="#35-co-oznacza-wdrozenie-normy-iso-9001-do-organizacji-przedsiebiorstwa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>35. Co oznacza wdrożenie normy ISO 9001 do organizacji (przedsiębiorstwa)?</h3>
+<p>Zapewnia, że jej system zarządzania jakością  jest zdolny do spełnienia podstawowych wymagań w obszarze jakości.</p>
+<h3 id="36-jak-czesto-normy-iso-serii-9000-sa-przegladane-pod-wzgledem-aktualnosci-przydatnosci"><a name="user-content-36-jak-czesto-normy-iso-serii-9000-sa-przegladane-pod-wzgledem-aktualnosci-przydatnosci" href="#36-jak-czesto-normy-iso-serii-9000-sa-przegladane-pod-wzgledem-aktualnosci-przydatnosci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>36. Jak często normy ISO serii 9000 są przeglądane pod względem aktualności (przydatności)?</h3>
+<p>co 5 lat</p>
+<h3 id="37-co-potwierdza-certyfikat-zarzadzania-jakosci"><a name="user-content-37-co-potwierdza-certyfikat-zarzadzania-jakosci" href="#37-co-potwierdza-certyfikat-zarzadzania-jakosci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>37. Co potwierdza certyfikat zarządzania jakości?</h3>
+<p>Certyfikat systemu zarządzania jakością potwierdza, że jakość wyrobów i świadczonych usług ma charakter stabilny i powtarzalny.</p>
+<h3 id="38-co-jest-przedmiotem-harmonizacji-technicznej-w-unii-europejskiej"><a name="user-content-38-co-jest-przedmiotem-harmonizacji-technicznej-w-unii-europejskiej" href="#38-co-jest-przedmiotem-harmonizacji-technicznej-w-unii-europejskiej" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>38. Co jest przedmiotem harmonizacji technicznej w Unii Europejskiej?</h3>
+<p>Przepisy związane  z bezpieczeństwem,  ze zdrowiem i z ochroną środowiska.</p>
+<h3 id="39-jaki-jest-zakres-harmonizacji-technicznej"><a name="user-content-39-jaki-jest-zakres-harmonizacji-technicznej" href="#39-jaki-jest-zakres-harmonizacji-technicznej" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>39. Jaki jest zakres harmonizacji technicznej?</h3>
+<p>Harmonizacja jest ograniczona do podstawowych wymagań, jakie ma spełnić wyrób mający być wprowadzony na rynek.</p>
+<h3 id="40-jaki-produkt-jest-uwazany-za-bezpieczny"><a name="user-content-40-jaki-produkt-jest-uwazany-za-bezpieczny" href="#40-jaki-produkt-jest-uwazany-za-bezpieczny" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>40. Jaki produkt jest uważany za bezpieczny?</h3>
+<p>Jest to produkt który w warunkach normalnych nie stwarza żadnego zagrożenia lub   stwarza zagrożenie znikome.</p>
+<h3 id="41-kto-jest-odpowiedzialny-za-bezpieczenstwo-produktu"><a name="user-content-41-kto-jest-odpowiedzialny-za-bezpieczenstwo-produktu" href="#41-kto-jest-odpowiedzialny-za-bezpieczenstwo-produktu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>41. Kto jest odpowiedzialny za bezpieczeństwo produktu?</h3>
+<p>Producent</p>
+<h3 id="42-jakie-wyroby-moga-byc-oznaczone-symbolem-ce"><a name="user-content-42-jakie-wyroby-moga-byc-oznaczone-symbolem-ce" href="#42-jakie-wyroby-moga-byc-oznaczone-symbolem-ce" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>42. Jakie wyroby mogą być oznaczone symbolem CE?</h3>
+<p>Wyroby spełniające wymagania dyrektyw europejskich.</p>
+<h3 id="43-gdzie-sa-okreslone-podstawowe-wymagania-dotyczace-wyrobow-a-gdzie-wymagania-szczegoowe"><a name="user-content-43-gdzie-sa-okreslone-podstawowe-wymagania-dotyczace-wyrobow-a-gdzie-wymagania-szczegoowe" href="#43-gdzie-sa-okreslone-podstawowe-wymagania-dotyczace-wyrobow-a-gdzie-wymagania-szczegoowe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>43. Gdzie są określone podstawowe ‘wymagania dotyczące wyrobów’, a gdzie ‘wymagania szczegółowe’?</h3>
+<p><strong>Podstawowe</strong> wymagania dotyczące wyrobów – określone są w dyrektywach<br />
+<strong>Szczegółowe</strong> – w technicznych normach zharmonizowanych</p>
+<h3 id="44-prosze-znac-symbole-norm-brytyjskich-niemieckich-i-polskich"><a name="user-content-44-prosze-znac-symbole-norm-brytyjskich-niemieckich-i-polskich" href="#44-prosze-znac-symbole-norm-brytyjskich-niemieckich-i-polskich" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>44. Proszę znać symbole norm: brytyjskich, niemieckich i polskich.</h3>
+<ul>
+<li>PN - Polska</li>
+<li>DIN - Niemiecka</li>
+<li>BS - Brytyjska</li>
+</ul>
+<h3 id="45-prosze-znac-jednostki-normalizacji-miedzynarodowej-i-regionalnej"><a name="user-content-45-prosze-znac-jednostki-normalizacji-miedzynarodowej-i-regionalnej" href="#45-prosze-znac-jednostki-normalizacji-miedzynarodowej-i-regionalnej" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>45. Proszę znać jednostki normalizacji międzynarodowej i regionalnej.</h3>
+<p>Międzynarodowe:</p>
+<ul>
+<li>ISO - Międzynarodowa Organizacja Normalizacyjna</li>
+<li>IEC - Międzynarodowa Komisja Elektrotechniczna</li>
+<li>ITU - Międzynarodowy Związek Telekomunikacyjny</li>
+</ul>
+<p>Regionalne:</p>
+<ul>
+<li>CEN - Europejski Komitet Normalizacyjny</li>
+<li>CENELEC - Europejski Komitet Normalizacyjny Elektrotechniki</li>
+<li>ETSI - Europejski Instytut Norm Telekomunikacyjnych</li>
+</ul>
+<h3 id="46-co-oznacza-pojecie-product-liability"><a name="user-content-46-co-oznacza-pojecie-product-liability" href="#46-co-oznacza-pojecie-product-liability" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>46. Co oznacza pojęcie „product liability”?</h3>
+<p>Oznacza odpowiedzialność szeroko rozumianego producenta za swój produkt.</p>
+<h3 id="47-jak-sa-rozumiane-pojecia-korekcja-korygowanie-zapobieganie"><a name="user-content-47-jak-sa-rozumiane-pojecia-korekcja-korygowanie-zapobieganie" href="#47-jak-sa-rozumiane-pojecia-korekcja-korygowanie-zapobieganie" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>47. Jak są rozumiane pojęcia: korekcja, korygowanie, zapobieganie?</h3>
+<ul>
+<li><strong>korekcja</strong> - usuwanie wad produktu na etapie wytwarzania, usunięcie przyczyn niezgodności*** , np. użycie lepszej jakości skóry do wytwarzania butów</li>
+<li><strong>korygowanie</strong> - poprawianie wytworzonego już produktu, usunięcie skutków niezgodności (a nie przyczyn), np. zaniesienie dziurawego buta do szewca by załatał</li>
+<li><strong>zapobieganie</strong> - niedopuszczenie do wystąpienia wad, np. zaopatrzenie się w zapas skóry lepszej jakości, wypracowanie planu polepszenia jakości obuwia</li>
+</ul>
+<h3 id="48-wymien-trzy-podstawowe-prawa-konsumenta"><a name="user-content-48-wymien-trzy-podstawowe-prawa-konsumenta" href="#48-wymien-trzy-podstawowe-prawa-konsumenta" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>48. Wymień trzy podstawowe prawa konsumenta.</h3>
+<p>Jest ich 8: </p>
+<ul>
+<li>Prawo do pełnej informacji</li>
+<li>Prawo do bezpieczeństwa i ochrony zdrowia</li>
+<li>Prawo do wyboru produktu</li>
+<li>Prawo do wysłuchania głosu konsumenta</li>
+<li>Prawo do pozytywnego załatwienia uzasadnionych reklamacji</li>
+<li>Prawo do edukacji</li>
+<li>Prawo do życia w zdrowym środowisku</li>
+<li>Prawo do zaspokojenia podstawowych potrzeb</li>
+</ul>
+<h3 id="49-sa-trzy-grupy-dziaan-zmniejszajace-zagrozenie-dla-konsumenta-z-powodu-niebezpiecznego-produktu-prosze-je-wymienic"><a name="user-content-49-sa-trzy-grupy-dziaan-zmniejszajace-zagrozenie-dla-konsumenta-z-powodu-niebezpiecznego-produktu-prosze-je-wymienic" href="#49-sa-trzy-grupy-dziaan-zmniejszajace-zagrozenie-dla-konsumenta-z-powodu-niebezpiecznego-produktu-prosze-je-wymienic" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>49. Są trzy grupy działań zmniejszające zagrożenie dla konsumenta z powodu niebezpiecznego produktu – proszę je wymienić.</h3>
+<p>NIE MA :C</p>
+<h3 id="50-istnieje-szesc-przesanek-zwolnienia-producenta-od-odpowiedzialnosci-za-niebezpieczny-produkt-prosze-wymienic-jedna-z-nich"><a name="user-content-50-istnieje-szesc-przesanek-zwolnienia-producenta-od-odpowiedzialnosci-za-niebezpieczny-produkt-prosze-wymienic-jedna-z-nich" href="#50-istnieje-szesc-przesanek-zwolnienia-producenta-od-odpowiedzialnosci-za-niebezpieczny-produkt-prosze-wymienic-jedna-z-nich" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>50. Istnieje sześć przesłanek zwolnienia producenta od odpowiedzialności za niebezpieczny produkt. Proszę wymienić jedną z nich.</h3>
+<ul>
+<li>Producent nie wprowadził niebezpiecznie wadliwego produktu do obrotu.</li>
+<li>W chwili wprowadzenia do obrotu wada nie istniała.</li>
+<li>Produkt nie był przedmiotem biznesu.</li>
+<li>Wadliwy produkt był zgodny z przepisami państwowymi.</li>
+<li>Stan wiedzy naukowej i technicznej w chwili wprowadzenia do obrotu uniemożliwiał  wykrycie wady (ryzyko postępu).</li>
+<li>Produkt był częścią składową innego produktu, a szkoda nie była spowodowana tą częścią składową.</li>
+</ul>
+<h3 id="51-za-producenta-jest-uwazany-wytworca-quasi-producent-importer-sprzedawca-dystrybutor-detaliczny-prosze-zapamietac-ich-charakterystyczne-cechy"><a name="user-content-51-za-producenta-jest-uwazany-wytworca-quasi-producent-importer-sprzedawca-dystrybutor-detaliczny-prosze-zapamietac-ich-charakterystyczne-cechy" href="#51-za-producenta-jest-uwazany-wytworca-quasi-producent-importer-sprzedawca-dystrybutor-detaliczny-prosze-zapamietac-ich-charakterystyczne-cechy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>51.  Za producenta jest uważany: wytwórca, quasi-producent, importer, sprzedawca (dystrybutor detaliczny). Proszę zapamiętać ich charakterystyczne cechy.</h3>
+<ul>
+<li><strong>Wytwórca</strong> -  producent finalnego wyrobu bądź też jego komponentów,</li>
+<li><strong>Quasi-producent</strong> – jest to podmiot gospodarczy który nie produkuje jednak za zgodą wytwórcy umieszcza swoje logo na wyrobie.</li>
+<li><strong>Importer</strong> – podmiot gospodarczy sprowadzający wyroby z innych krajów</li>
+<li><strong>Sprzedawca</strong> – jest to podmiot rozprowadzający dobra na rynek. Przejmuje on rolę producenta w wypadku gdy nie można określić wytwórcy wyrobu.</li>
+</ul>
+<h3 id="52-jak-jest-rozumiana-szkoda"><a name="user-content-52-jak-jest-rozumiana-szkoda" href="#52-jak-jest-rozumiana-szkoda" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>52. Jak jest rozumiana szkoda?</h3>
+<p>Szkoda jest rozumiana jako śmierć, obrażenia osobiste, uszkodzenie lub zniszczenie rzeczy określonej wartości.</p>
+<h3 id="53-jakie-elementy-skadowe-zawieraja-koszty-jakosci"><a name="user-content-53-jakie-elementy-skadowe-zawieraja-koszty-jakosci" href="#53-jakie-elementy-skadowe-zawieraja-koszty-jakosci" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>53. Jakie elementy składowe zawierają koszty jakości?</h3>
+<p>Koszty jakości = koszty + straty (w obszarze jakości).</p>
+<h3 id="54-jak-jest-rozumiana-zasada-110100-dotyczaca-bedow-odchylen-od-wymagan-jakosciowych"><a name="user-content-54-jak-jest-rozumiana-zasada-110100-dotyczaca-bedow-odchylen-od-wymagan-jakosciowych" href="#54-jak-jest-rozumiana-zasada-110100-dotyczaca-bedow-odchylen-od-wymagan-jakosciowych" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>54. Jak jest rozumiana zasada 1:10:100, dotycząca błędów (odchyleń od wymagań jakościowych)?</h3>
+<p>Dotyczy idei jak najszybszego wykrycia błędu w procesie. <br />
+Koncepcja „Zero defects” Crosby`ego? </p>
+<h3 id="55-w-projektowania-produktu-powstaje-najwiecej-bedow-jak-sa-rozumiane-pojecia-przeglad-projektu-weryfikacja-projektu-walidacja-projektu"><a name="user-content-55-w-projektowania-produktu-powstaje-najwiecej-bedow-jak-sa-rozumiane-pojecia-przeglad-projektu-weryfikacja-projektu-walidacja-projektu" href="#55-w-projektowania-produktu-powstaje-najwiecej-bedow-jak-sa-rozumiane-pojecia-przeglad-projektu-weryfikacja-projektu-walidacja-projektu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>55. W projektowania produktu powstaje najwięcej błędów. Jak są rozumiane pojęcia: przegląd projektu, weryfikacja projektu, walidacja projektu?</h3>
+<ul>
+<li><strong>Przegląd projektu</strong> – polega na upewnienie się, że wszystkie działania, jakie na danym etapie projektowania należało zrealizować, zostały wykonane i to dobrze,  * a także ustalenie, że nie zapomniano o żadnym szczególe.</li>
+<li><strong>Weryfikacja projektu</strong> -  polega na sprawdzeniu, czy dane wyjściowe z projektowania spełniają założenia danych wejściowych. Projektowanie bowiem jest procesem o  * dużym stopniu złożoności i ryzyka. Nigdy nie wiadomo, co w rzeczywistości w jego wyniku osiągniemy.</li>
+<li><strong>Walidacja projektu</strong> – polega na jego zatwierdzeniu projektu po przeprowadzeniu wstępnych badań eksploatacyjnych w normalnych warunkach.</li>
+</ul>
+<h3 id="56-co-rozumie-sie-pod-pojeciem-samooceny-organizacji"><a name="user-content-56-co-rozumie-sie-pod-pojeciem-samooceny-organizacji" href="#56-co-rozumie-sie-pod-pojeciem-samooceny-organizacji" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>56. Co rozumie się pod pojęciem samooceny organizacji?</h3>
+<p>Samoocena jest rozumiana jako wszechstronny i systematyczny przegląd działań i wyników organizacji. Jest narzędziem samouczenia się organizacji. Jest „rachunkiem sumienia” organizacji.</p>
+<h3 id="57-wymien-podstawowe-nagrody-jakosci-jako-modele-samooceny"><a name="user-content-57-wymien-podstawowe-nagrody-jakosci-jako-modele-samooceny" href="#57-wymien-podstawowe-nagrody-jakosci-jako-modele-samooceny" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>57. Wymień podstawowe nagrody jakości jako modele samooceny.</h3>
+<ul>
+<li>Nagroda im. Deminga - JAP</li>
+<li>Nagroda im. Baldriga’a - USA</li>
+<li>Nagroda EFQM – EU</li>
+<li>Polska nagroda jakości</li>
+</ul>
+<h3 id="58-co-oznacza-kaizen-do-czego-suzy-wymien-jedna-zasade-sposrod-10"><a name="user-content-58-co-oznacza-kaizen-do-czego-suzy-wymien-jedna-zasade-sposrod-10" href="#58-co-oznacza-kaizen-do-czego-suzy-wymien-jedna-zasade-sposrod-10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>58. Co oznacza Kaizen? Do czego służy? Wymień jedną zasadę spośród 10.</h3>
+<ul>
+<li>Kaizen (Kai - zmiana, zen - dobrze) (dobra zmiana :D) </li>
+<li>Traktuj problemy jako możliwości.</li>
+<li>Zawsze pytaj pięć razy „Dlaczego?”  (technika Why)</li>
+<li>Ceń pomysły innych osób.</li>
+<li>Myśl  o rozwiązaniu, które da się wdrożyć.</li>
+<li>Odrzucaj rozwiązania powszechne.</li>
+<li>Nie przyjmuj do siebie myśli, że czegoś nie da się zrobić.</li>
+<li>Wybierz rozwiązanie proste.</li>
+<li>Użyj swojej wiedzy i intelektu zamiast pieniędzy.</li>
+<li>Ewentualne pomyłki natychmiast koryguj.</li>
+<li>Wiedz, że ulepszenia nie mają końca.</li>
+</ul>
+<h3 id="59-do-czego-suzy-six-sigma"><a name="user-content-59-do-czego-suzy-six-sigma" href="#59-do-czego-suzy-six-sigma" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>59. Do czego służy Six Sigma?</h3>
+<p>Jest to metodyka doskonalenia procesów. Celem usprawnienia procesu jest uzyskanie 6 braków na 1 000 000. Najłatwiej zobrazować metodykę tę za pomocą histogramu. </p></article></body></html>
