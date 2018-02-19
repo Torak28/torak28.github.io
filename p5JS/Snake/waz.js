@@ -6,19 +6,19 @@ function Waz() {
   this.dlugosc = 0;
   this.ogon = [];
 
-    this.zjedz = function(pos) {
-	var d = dist(this.x, this.y, pos.x, pos.y);
-	if (d<1){
-		this.dlugosc++;
-		return true;
-	}else{
-		return false;
-	}
+  this.zjedz = function(pos) {
+  	var d = dist(this.x, this.y, pos.x, pos.y);
+  	if (d < 1){
+  		this.dlugosc++;
+  		return true;
+  	}else{
+  		return false;
+  	}
   }
 
   this.kierunek = function(x, y){
-	this.szybkoscX = x;
-	this.szybkoscY = y;
+  	this.szybkoscX = x;
+  	this.szybkoscY = y;
   }
 
   this.smierc = function() {
@@ -34,25 +34,25 @@ function Waz() {
   }
 
   this.update = function() {
-	if(this.dlugosc === this.ogon.length) {
-		for (var i = 0; i < this.ogon.length - 1; i++) {
-			this.ogon[i] = this.ogon[i+1];
-		}
-	}
-	this.ogon[this.dlugosc - 1] = createVector(this.x,this.y);
+  	if(this.dlugosc === this.ogon.length) {
+  		for (var i = 0; i < this.ogon.length - 1; i++) {
+  			this.ogon[i] = this.ogon[i+1];
+  		}
+  	}
+  	this.ogon[this.dlugosc - 1] = createVector(this.x,this.y);
 
-	this.x = this.x + this.szybkoscX * skala;
-	this.y = this.y + this.szybkoscY * skala;
+  	this.x = this.x + this.szybkoscX * skala;
+  	this.y = this.y + this.szybkoscY * skala;
 
-	this.x = constrain(this.x, 0 ,width - skala);
-	this.y = constrain(this.y, 0, height - skala);
+  	this.x = constrain(this.x, 0 ,width - skala);
+  	this.y = constrain(this.y, 0, height - skala);
   }
 
   this.show = function() {
-	fill(255);
-	for (var i = 0; i < this.ogon.length; i++) {
-		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
-	}
-	rect(this.x, this.y, skala, skala);
+  	fill(255);
+  	for (var i = 0; i < this.ogon.length; i++) {
+  		rect(this.ogon[i].x, this.ogon[i].y, skala, skala);
+  	}
+  	rect(this.x, this.y, skala, skala);
   }
 }

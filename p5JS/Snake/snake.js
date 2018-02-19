@@ -23,13 +23,43 @@ function setup() {
 function lokacja() {
 	var kolumny = floor(width/skala);
 	var wiersze = floor(height/skala);
-	jedzonko = createVector(floor(random(kolumny)), floor(random(wiersze)));
+
+	var x = floor(random(kolumny));
+	var y = floor(random(wiersze));
+	console.log("dlugosc: ", s.dlugosc);
+	console.log("X: ", x, "Y:", y);
+
+	var ok = 1;
+	if(s.dlugosc > 0){
+		do{
+			for (var i = 0; i < s.ogon.length; i++) {
+				if(x == (s.ogon[i].x / skala)){
+					ok = 0;
+					break;
+				}else if(y == (s.ogon[i].y / skala)){
+					ok = 0;
+					break;
+				}
+			}
+		}while(ok = 0)
+	}
+
+	jedzonko = createVector(x, y);
 	jedzonko.mult(skala);
 }
 
 function draw() {
 	image(img, 0, 0);
 
+	/*
+	if(s.dlugosc > 0){
+		for (var i = 0; i < s.ogon.length; i++) {
+			console.log(i, ": ", s.ogon[i].x, s.ogon[i].y);
+		}
+	}
+	console.log("Jedzienie: ", jedzonko.x, jedzonko.y);
+	*/
+	
 	if(s.zjedz(jedzonko)) {
 		ding.play();
 		lokacja();
@@ -42,8 +72,8 @@ function draw() {
 	rect(jedzonko.x, jedzonko.y, skala, skala);
 
 	textSize(32);
-  fill(255);
-  text("Punkty: " + s.dlugosc, 20, 30);
+  	fill(255);
+  	text("Punkty: " + s.dlugosc, 20, 30);
 }
 
 function keyPressed() {
