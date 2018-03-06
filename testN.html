@@ -1,0 +1,1107 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>Nokia</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-nokia---rozmowa-kwalifikacyjna" class="anchor" href="#nokia---rozmowa-kwalifikacyjna" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nokia - Rozmowa kwalifikacyjna</h1>
+<p>06.03.2018, godz. 14:00,
+ul. Strzegomska 36, Green Towers B, Wrocław</p>
+<hr>
+<h3>
+<a id="user-content-cv" class="anchor" href="#cv" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CV</h3>
+<ul>
+<li>ServiceNow,</li>
+<li>PythonTranslate,</li>
+<li>MonaLisaGenetic,</li>
+<li>BikeRentApp,</li>
+<li>PGK,</li>
+<li>torak28.github.io,</li>
+<li>Grafika Komputerowa.</li>
+</ul>
+<hr>
+<h3>
+<a id="user-content-seven-testing-principles" class="anchor" href="#seven-testing-principles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Seven Testing Principles:</h3>
+<ul>
+<li>
+<strong>Testing shows presence of defects</strong> not that there are none</li>
+<li>
+<strong>Exhaustive testing is impossible</strong>, you can't follow every scenario</li>
+<li><strong>Early testing</strong></li>
+<li>
+<strong>Defect clustering</strong> - small number of modules are responisble for most of bugs</li>
+<li>
+<strong>Pesticide paradox</strong> - same test running over and over again will not find any new defects</li>
+<li><strong>Testing is context dependend</strong></li>
+<li>
+<strong>Absence-of-error fallacy</strong> if system is useless its :c</li>
+</ul>
+<hr>
+<h3>
+<a id="user-content-metodyki" class="anchor" href="#metodyki" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Metodyki</h3>
+<ol>
+<li>
+<strong>Model kaskadowy</strong> - projekt jest dzielony na sześć do ośmiu faz, które następują kolejno po sobie. Danymi wejściowymi dla każdej fazy są dane wyjściowe fazy poprzedniej. Model stosowany jest w projektach o dobrze zdefiniowanych wymaganiach, stosowany najczęściej w projektach małych.</li>
+</ol>
+<p><a href="https://raw.githubusercontent.com/Torak28/ObronaInzynierska/master/img/s3_kaskadowy.PNG" target="_blank" rel="nofollow"><img src="https://raw.githubusercontent.com/Torak28/ObronaInzynierska/master/img/s3_kaskadowy.PNG" alt="alt text" title="xd1" style="max-width:100%;"></a></p>
+<p><strong>Zalety metody:</strong></p>
+<ul>
+<li>Cały proces jest dobrze udokumentowany i ustalony z klientem.</li>
+<li>Ułatwia organizację: planowanie, harmonogramowanie i monitorowanie projektu</li>
+<li>Wszystkie wymagania są analizowane i zatwierdzane przez klienta, klient sam może oszacować korzyści z wdrożenia systemu</li>
+<li>Wymusza dokończenie dokumentacji po każdej fazie</li>
+</ul>
+<p><strong>Wady:</strong></p>
+<ul>
+<li>Ścisła kolejność wykonywanych prac – realizatorzy poszczególnych faz nie mogą pracować równolegle</li>
+<li>Mała możliwość modyfikacji projektu</li>
+<li>Wysokie koszty błędów popełnionych we wczesnych fazach</li>
+<li>Testowanie systemu dopiero po zakończeniu programowania – może powodować poprawianie „na skróty”</li>
+<li>Niedopasowanie do rzeczywistości – rzeczywiste projekty rzadko są sekwencyjne</li>
+</ul>
+<hr>
+<ol start="2">
+<li>
+<strong>Model spiralny</strong> - rozwinięcie metody kaskadowej – polecany w przypadku dużych, drogich i skomplikowanych projektów. Istota sprowadza się do tego, że jest to iteracyjna metoda kaskadowa.</li>
+</ol>
+<p><a href="https://raw.githubusercontent.com/Torak28/ObronaInzynierska/master/img/s3_spiralny.PNG" target="_blank" rel="nofollow"><img src="https://raw.githubusercontent.com/Torak28/ObronaInzynierska/master/img/s3_spiralny.PNG" alt="alt text" title="xd2" style="max-width:100%;"></a></p>
+<p><strong>Zalety metody:</strong></p>
+<ul>
+<li>Cały system powstaje we współpracy z klientem</li>
+<li>Wszystkie braki fazy ustalania wymagań są identyfikowane w miarę postępu prac</li>
+</ul>
+<p><strong>Wady:</strong></p>
+<ul>
+<li>Wymagana jest dyscyplina po stronie klienta</li>
+<li>Kontrola wykonawcza jest trudna, bo klient nie odpowiada ani za budżet ani za harmonogram</li>
+</ul>
+<hr>
+<ol start="3">
+<li>
+<strong>SCRUM</strong> jest metodyką adaptacyjną, która w szybkim tempie zyskuje popularność na całym świecie - również w Polsce. Jako jeden z powodów sukcesu SCRUM podaję się fakt, iż daje on konkretny i spójny przepis na prowadzenie projektów informatycznych oferując przy tym dużą swobodę jeśli chodzi o sposób implementacji w konkretnej organizacji</li>
+</ol>
+<p>SCRUM definiuje cztery główne role w projekcie:</p>
+<ul>
+<li>Właściciel produktu – jest to klient lub sponsor projektu odpowiedzialny za kwestie biznesowe</li>
+<li>ScrumMaster - jest to osoba odpowiedzialna za kontrolę przebiegu procesów</li>
+<li>Członek zespołu - osoba należąca do zespołu realizującego projekt bez względu na wykonywane czynności. (programista, analityk etc.)</li>
+<li>Interesariusze – osoby odpowiedzialne za podejmowanie decyzji strategicznych, których taktyczną implementację prowadzi właściciel produktu. Interesanci nie biorą czynnego udziału w codziennych spotkaniach zespołu projektowego – mogą jednak pełnić rolę obserwatorów.</li>
+</ul>
+<p>Zespół projektowy pracuje w określonym przedziale czasowym zwanym przebiegiem (ang. <strong>sprint</strong>). Efektem przebiegu za każdym razem powinno być dostarczenie użytkownikom kolejnego działającego produktu. Zasadą jest to, że zmiany wprowadzane w jednym przebiegu muszą być namacalne dla użytkowników. Muszą wnosić wartość funkcjonalną. Przebieg może trwać <strong>od 2 do 6 tygodni</strong>. Zaleca się stosowanie przebiegów o stałych długościach.</p>
+<p>W pierwszym etapie tworzona jest lista wymagań użytkownika, są one gromadzone w postaci <strong>"historyjek"</strong>. Każda historyjka opisuje jedną cechę systemu. Właściciel projektu jest też zobowiązany do przedstawienia priorytetów wymagań oraz głównego celu przebiegu. Po tym formułowany jest rejestr wymagań. Cel przebiegu jest <strong>zapisywany w widocznym miejscu</strong> w pokoju członków zespołu.</p>
+<p>Następnie wybierane są zadania o najwyższym priorytecie, a jednocześnie przyczyniające się do realizacji celu projektu. Szacuje się czas realizacji każdego zadania. Lista zadań wraz z oszacowaną czasochłonnością nosi nazwę rejestru zadań przebiegu (<strong>sprint backlog</strong>).</p>
+<hr>
+<h3>
+<a id="user-content-test-levels" class="anchor" href="#test-levels" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test Levels</h3>
+<ol>
+<li>Component Testing - unit testing</li>
+</ol>
+<p>Poszukiwanie defektu w pojedynczym module w zależności od kontekstu.</p>
+<p>Funkcja do testowania:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">add</span>(<span class="pl-smi">x</span>, <span class="pl-smi">y</span>):
+	<span class="pl-k">return</span> x <span class="pl-k">+</span> y</pre></div>
+<p>Test samej funkcji:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">import</span> unittest
+<span class="pl-k">import</span> add
+
+<span class="pl-k">class</span> <span class="pl-en">TestAdd</span>(<span class="pl-e">unittest</span>.<span class="pl-e">TestCase</span>):
+
+	<span class="pl-k">def</span> <span class="pl-en">test_add</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
+		result <span class="pl-k">=</span> add.add(<span class="pl-c1">10</span>, <span class="pl-c1">5</span>)
+		<span class="pl-c1">self</span>.assertEqual(result, <span class="pl-c1">15</span>)</pre></div>
+<ol start="2">
+<li>Integration Testing</li>
+</ol>
+<p>Sprawdzanie interfejsu połaćzenia aplikacji z systemem operacyjnym i pomiędzy komponentami samej aplikacji</p>
+<p>Testowanie Top - Down
+Testowanie Bottom - Up</p>
+<ol start="3">
+<li>System Testing</li>
+</ol>
+<p>Testowanie całego systemuu poprzez symulowanie warunków produukcyjnych</p>
+<ol start="4">
+<li>Acceptance Testing</li>
+</ol>
+<p>Testowanie z wykorzystaniem właściciela produktuu do wydania opinii czy dana funkcjonalność odpowiada założeniom</p>
+<hr>
+<h3>
+<a id="user-content-testy-funkcjonalneblack-box-testing" class="anchor" href="#testy-funkcjonalneblack-box-testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testy funkcjonalne(black box testing)</h3>
+<p>Tester nie ma dostępu do koduu testowanej aplikacji. Testy wykonywane są w oparciu o dokumentacje oraz założenia funkcjonalne. Pozwala to sprawdzić braki implementacyjne oraz niespaełnianie założeń kosztem określenia miejsca występowania(linii w kodzie).</p>
+<hr>
+<h3>
+<a id="user-content-testy-niefuunkcjonalne" class="anchor" href="#testy-niefuunkcjonalne" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testy niefuunkcjonalne</h3>
+<p>Brane są pod uwagę aspeky oprogramowania, które nie są związane z określoną funkcją lub działaniem użytkownika, takie jak skalowalność, bezpieczeństwo czy czas odpowiedzi aplikacji. Np. ile osób może się zalogować na jednocześnie? Testy niefunkcjonalne są wykonywane na wszystkich poziomach testów.</p>
+<p>Testy niefunkcjonalne dają odpowiedź na pytanie “jak” działa system. Testoane jest między innymi obciązęnie i wydajność systemu.</p>
+<hr>
+<h3>
+<a id="user-content-testy-strukturalnewhite-box-testing" class="anchor" href="#testy-strukturalnewhite-box-testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testy strukturalne(white box testing)</h3>
+<p>Testy strukturalne są określane jako testy białej skrzynki lub szklanej skrzynki, ponieważ jesteśmy zainteresowani tym, “co dzieje się wewnątrz” systemu lub komponentu.</p>
+<p>Do przeprowadzenia testów strukturalnych, tester musi posiadać wiedzę z zakresu implementacji kodu, innymi słowy powinien umieć “czytać” kod.</p>
+<hr>
+<h3>
+<a id="user-content-telekomunikacja" class="anchor" href="#telekomunikacja" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Telekomunikacja</h3>
+<ul>
+<li>
+<strong>1 G</strong> - posługiwanie sie analogowymi sygnałami na małym dystansie</li>
+<li>
+<strong>2 G</strong> - sygnały cyfrowe(GSM)</li>
+<li>
+<strong>2.5 G</strong> - GPRS - General PaxketRadio Service -&gt; 56/64 kbps</li>
+<li>
+<strong>2.75 G</strong> - EDGE - Enhanced Data rates for GSM Evolution -&gt; 170 kbps</li>
+<li>
+<strong>3 G</strong> - UMTS - Universe Mobile Telecommunication System -&gt; 384 kbps</li>
+<li>
+<strong>3.5 G</strong> - HSDPA - High Speed DL Packet Access -&gt; 2mbps</li>
+<li>
+<strong>3.9 G</strong> - LTE - Long Term Evolution</li>
+</ul>
+<hr>
+<h3>
+<a id="user-content-python---wielodziedziczenie" class="anchor" href="#python---wielodziedziczenie" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python - wielodziedziczenie</h3>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">class</span> <span class="pl-en">A</span>:
+    <span class="pl-k">def</span> <span class="pl-en">m</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>m of A called<span class="pl-pds">"</span></span>)
+
+<span class="pl-k">class</span> <span class="pl-en">B</span>(<span class="pl-e">A</span>):
+    <span class="pl-k">pass</span>
+    
+<span class="pl-k">class</span> <span class="pl-en">C</span>(<span class="pl-e">A</span>):
+    <span class="pl-k">def</span> <span class="pl-en">m</span>(<span class="pl-smi"><span class="pl-smi">self</span></span>):
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>m of C called<span class="pl-pds">"</span></span>)
+
+<span class="pl-k">class</span> <span class="pl-en">D</span>(<span class="pl-e">B</span>,<span class="pl-e">C</span>):
+    <span class="pl-k">pass</span>
+
+x <span class="pl-k">=</span> D()
+x.m()</pre></div>
+<p><strong>Problem diamentowy</strong></p>
+<hr>
+<h3>
+<a id="user-content-python---własne-paczki" class="anchor" href="#python---w%C5%82asne-paczki" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python - własne paczki</h3>
+<ul>
+<li>Zwykły import  bez rozszerzenia <em>.py</em>
+</li>
+<li>Spakowanie np. Cythonem</li>
+</ul>
+<h3>
+<a id="user-content-python---urllib-bs" class="anchor" href="#python---urllib-bs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python - urllib, bs</h3>
+<ul>
+<li>urllib - otwarcie strony</li>
+<li>BeautifulSoup - przeszukanie strony po tagach, np. img</li>
+</ul>
+<p>Przykład:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">import</span> urllib2
+<span class="pl-k">import</span> wget
+<span class="pl-k">from</span> BeautifulSoup <span class="pl-k">import</span> BeautifulSoup
+
+url <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>https://designyoutrust.com/2018/01/artist-gustavo-viselner-makes-pixel-art-game-scenes-based-popular-tv-series-movies/<span class="pl-pds">'</span></span>
+
+suffix <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>1730<span class="pl-pds">'</span></span>
+
+page <span class="pl-k">=</span> BeautifulSoup(urllib2.urlopen(url))
+<span class="pl-k">for</span> i <span class="pl-k">in</span> page.findAll(<span class="pl-s"><span class="pl-pds">'</span>img<span class="pl-pds">'</span></span>):
+	<span class="pl-k">if</span> <span class="pl-c1">str</span>(i.get(<span class="pl-s"><span class="pl-pds">'</span>src<span class="pl-pds">'</span></span>)).endswith(suffix):
+		wget.download(i.get(<span class="pl-s"><span class="pl-pds">'</span>src<span class="pl-pds">'</span></span>))</pre></div>
+<hr>
+<h3>
+<a id="user-content-python---język" class="anchor" href="#python---j%C4%99zyk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python - język</h3>
+<ul>
+<li>język interpretowany, jak np. Ruby</li>
+<li>typoway dynamicznie</li>
+<li>nie ma dostępów <em>public</em>, <em>private</em> itd.</li>
+<li>można kopiować płytko i głęboko</li>
+<li>listy są edytowalne, tuple nie</li>
+<li>Multithreading jest w Pythonie dostępny z biblioteki</li>
+</ul>
+<hr>
+<h3>
+<a id="user-content-vpn" class="anchor" href="#vpn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>VPN</h3>
+<p>tunel, przez który płynie ruch w ramach sieci prywatnej pomiędzy klientami końcowymi za pośrednictwem publicznej sieci (takiej jak Internet) w taki sposób, że węzły tej sieci są przezroczyste dla przesyłanych w ten sposób pakietów. Można opcjonalnie kompresować lub szyfrować przesyłane dane w celu zapewnienia lepszej jakości lub większego poziomu bezpieczeństwa.</p>
+<p>Określenie „wirtualna” oznacza, że sieć ta istnieje jedynie jako struktura logiczna działająca w rzeczywistości w ramach sieci publicznej, w odróżnieniu od sieci prywatnej, która powstaje na bazie specjalnie dzierżawionych w tym celu łączy. Pomimo takiego mechanizmu działania stacje końcowe mogą korzystać z VPN dokładnie tak, jak gdyby istniało pomiędzy nimi fizyczne łącze prywatne.</p>
+<p>np. Pracownik może pracować z domu</p>
+<hr>
+<h3>
+<a id="user-content-sieć---warstwy" class="anchor" href="#sie%C4%87---warstwy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sieć - warstwy</h3>
+<p>W latach osiemdziesiątych stworzono model ISO/OSI. Został zaprojektowany jako "otwarty" model - opublikowany za darmo, bez restrykcji patentowych bądź ograniczeń rozpowszechniania. Aktualnie model ten jest traktowany jako wzorzec dla protokołów komunikacyjnych. Posiada on siedem warstw:</p>
+<table>
+<thead>
+<tr>
+<th>Numer</th>
+<th>Warstwa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>aplikacji</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prezentacji</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sesji</td>
+</tr>
+<tr>
+<td>4</td>
+<td>transportowa</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sieciowa</td>
+</tr>
+<tr>
+<td>6</td>
+<td>łącza danych</td>
+</tr>
+<tr>
+<td>7</td>
+<td>fizyczna</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Warstwa fizyczna</strong> zapewnia przekaz bitów między stacjami połączonymi fizycznym medium (kable miedziane, światłowody, łącza radiowe).</p>
+<p><strong>Warstwa łącza danych</strong> umieszcza dane w ramkach, które zawierają ciągi kontrolne. Warstwa ta również sprawdza jakość przekazywanych informacji, próbuje naprawić ewentualne błędy.</p>
+<p><strong>Warstwa sieciowa</strong> jest odpowiedzialna za ustalenie drogi do docelowego urządzenia. Jednostką danych w tej warstwie są pakiety. Występuje tutaj segmentacja danych.</p>
+<p><strong>Warstwa transportowa</strong> ma nadzór nad połączeniem (inicjacja, zrywanie) między dwoma stacjami. Warstwa ta jest również odpowiedzialna za podział danych na bloki, kontrolę poprawności transmisji, rozpoznawanie duplikatów oraz sprawdzanie poprawności adresowania.</p>
+<p><strong>Warstwa sesji</strong> synchronizuje przesył danych, wznawia go po przerwaniu połączenia.</p>
+<p><strong>Warstwa prezentacji</strong> przekształca dane użytkowników do postaci standardowej, używanej w sieci (np. zamiana Little Endian na Big Endian). Innymi cechami tej warstwy jest kompresja oraz szyfrowanie danych.</p>
+<p><strong>Warstwa aplikacji</strong> zapewnia obsługę użytkowników w dostępie do usług (transmisja plików, zdalny terminal, poczta, etc.).</p>
+<p>Koncepcja modelu TCP/IP jest identyczna jak w modelu OSI/ISO. Obecnie jest wykorzystywany jako struktura Internetu. Architektura tego modelu została opracowana w celu umożliwienia komunikacji między systemami pochodzącymi od różnych dostawców. W porównaniu do modelu OSI posiada mniej warstw, analogiczne warstwy zostały zaznaczone identycznym kolorem, jak w poprzedniej tabeli.</p>
+<table>
+<thead>
+<tr>
+<th>Numer</th>
+<th>Warstwa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>aplikacji</td>
+</tr>
+<tr>
+<td>2</td>
+<td>transportowa</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Internetu</td>
+</tr>
+<tr>
+<td>4</td>
+<td>dostępu do sieci</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Warstwa dostępu do sieci</strong> może zawierać protokoły dynamicznego przydzielania adresów IP. Protokoły działające w tej warstwie: Ethernet, WiFi.</p>
+<p><strong>Warstwa Internetu</strong> przetwarza dane posiadające adresy IP. Protokół działający w tej warstwie: IP.</p>
+<p><strong>Warstwa transportowa</strong> wykorzystuje protokoły TCP oraz UDP. Przesyłanie danych do odpowiednich aplikacji odbywa się za pomocą portów określonych dla każdego połączenia.</p>
+<p><strong>Warstwa aplikacji</strong> wykorzystuje różne protokoły (HTTP, XMPP, FTP, IRC, SSH, etc.).</p>
+<hr>
+<h3>
+<a id="user-content-telnet" class="anchor" href="#telnet" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>telnet</h3>
+<p>Telnet – standard protokołu komunikacyjnego używanego w sieciach komputerowych do obsługi odległego terminala w architekturze klient-serwer.</p>
+<p>Protokół obsługuje tylko terminale alfanumeryczne, co oznacza, że nie obsługuje myszy ani innych urządzeń wskazujących. Nie obsługuje także graficznych interfejsów użytkownika. Wszystkie polecenia muszą być wprowadzane w trybie znakowym w wierszu poleceń. Polecenia wydawane za pomocą komputera-klienta przysłane są poprzez sieć do serwera, na którym zainstalowane jest oprogramowanie serwera telnetu. W odpowiedzi serwer odsyła komunikaty, które następnie wyświetlane są na ekranie komputera-klienta.</p>
+<p><strong>Port 23</strong>
+<strong>Nie szyfrowane</strong></p>
+<hr>
+<h3>
+<a id="user-content-ssh" class="anchor" href="#ssh" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SSH</h3>
+<p>SSH (ang. secure shell) to standard protokołów komunikacyjnych używanych w sieciach komputerowych TCP/IP, w architekturze klient-serwer a od wersji 2 nawet w architekturze serwer-klient.</p>
+<p>W ścisłym znaczeniu SSH to tylko następca protokołu Telnet, służącego do terminalowego łączenia się ze zdalnymi komputerami. SSH różni się od Telnetu tym, że transfer wszelkich danych jest zaszyfrowany oraz możliwe jest rozpoznawanie użytkownika na wiele różnych sposobów. W szerszym znaczeniu SSH to wspólna nazwa dla całej rodziny protokołów, nie tylko terminalowych, lecz także służących do przesyłania plików (SCP, SFTP), zdalnej kontroli zasobów, tunelowania i wielu innych zastosowań. Wspólną cechą wszystkich tych protokołów jest identyczna z SSH technika szyfrowania danych i rozpoznawania użytkownika. Obecnie protokoły z rodziny SSH praktycznie wyparły wszystkie inne mniej bezpieczne protokoły, takie, jak np. rlogin czy RSH.</p>
+<p><strong>Port 22</strong>
+<strong>Szyfrowanie AES</strong></p>
+<hr>
+<h3>
+<a id="user-content-jenkins" class="anchor" href="#jenkins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Jenkins</h3>
+<p>Jenkins is an open source automation server written in Java. Jenkins helps to automate the non-human part of software development process, with continuous integration and facilitating technical aspects of continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat. It supports version control tools, including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, ClearCase and RTC, and can execute Apache Ant, Apache Maven and sbt based projects as well as arbitrary shell scripts and Windows batch commands. The creator of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software.</p>
+<p>Builds can be triggered by various means, for example by commit in a version control system, by scheduling via a cron-like mechanism and by requesting a specific build URL. It can also be triggered after the other builds in the queue have completed. Jenkins functionality can be extended with plugins.</p>
+<hr>
+<h3>
+<a id="user-content-unix---komendy" class="anchor" href="#unix---komendy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unix - komendy</h3>
+<ul>
+<li>grep</li>
+<li>Touch do stworzenia</li>
+<li>chmod do nadania uprawnień</li>
+<li>symlink</li>
+<li>passwd - zmiana hasła</li>
+<li>$zmienna</li>
+<li>ls</li>
+<li>head</li>
+<li>cp</li>
+<li>mv</li>
+</ul>
+<hr>
+<h3>
+<a id="user-content-robot-framework" class="anchor" href="#robot-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Robot Framework</h3>
+<pre><code>*** Settings ***
+Documentation Present some information about this test suite
+Library Selenium2Library
+
+*** Variables ***
+${Browser} = i.get('src')).endswith
+
+*** Test Cases ***
+Guest must sign in to check out
+	[Documentation] Present some information about this test suite
+	Open Browser http://www.amazon.com ${Browser}
+	Wait Until Page Contains Your Amazoncom
+	Input Text id=twotabsearchtextbox Ferari 458
+	Click Button xpath=//*{@id="nav-search"}/form/div[2]/div/input
+	Wait Until Page Contains results for "Ferari 458"
+	Close Browser
+</code></pre>
+<p>RIDE jako platforma do testowania z wykorzystaniem Selenium2Library</p>
+<hr>
+<h3>
+<a id="user-content-behave" class="anchor" href="#behave" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Behave</h3>
+<p>Test:</p>
+<pre><code># -- FILE: features/example.feature
+Feature: Showing off behave
+
+	Scenario Outline:
+		Given user is on
+		When I login with "&lt;username&gt;" and "&lt;password&gt;"
+		Then I am on the homepage
+</code></pre>
+<p>Metody:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-c"><span class="pl-c">#</span> -- FILE: features/steps/example_steps.py</span>
+<span class="pl-k">from</span> behave <span class="pl-k">import</span> <span class="pl-k">*</span>
+<span class="pl-k">from</span> pages <span class="pl-k">import</span> login_page
+
+<span class="pl-en">@when</span>(<span class="pl-s"><span class="pl-k">u</span><span class="pl-pds">'</span>I login with "&lt;username&gt;" and "&lt;password&gt;"<span class="pl-pds">'</span></span>)
+<span class="pl-k">def</span> <span class="pl-en">step_impl</span>(<span class="pl-smi">context</span>, <span class="pl-smi">username</span>, <span class="pl-smi">password</span>):
+	login_page.login(context, username, password)
+
+<span class="pl-en">@then</span>(<span class="pl-s"><span class="pl-k">u</span><span class="pl-pds">'</span>I am on the homepage<span class="pl-pds">'</span></span>)
+<span class="pl-k">def</span> <span class="pl-en">step_impl</span>(<span class="pl-smi">context</span>):
+	<span class="pl-k">pass</span></pre></div>
+<p>Page Object File:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> selenium.webdriver.support.ui <span class="pl-k">import</span> WebDriverWait
+<span class="pl-k">from</span> selenium.webdriver.common.by <span class="pl-k">import</span> By
+<span class="pl-k">from</span> selenium.webdriver.support <span class="pl-k">import</span> expected_conditions <span class="pl-k">as</span> <span class="pl-c1">EC</span>
+
+<span class="pl-k">def</span> <span class="pl-en">login</span>(<span class="pl-smi">context</span>, <span class="pl-smi">username</span>, <span class="pl-smi">password</span>):
+	<span class="pl-c"><span class="pl-c">#</span> code</span></pre></div>
+</article></body></html>
