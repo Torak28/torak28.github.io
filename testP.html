@@ -722,6 +722,11 @@ pre {
   border-color: #4078c0;
 }
 </style><title>testP</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-globallogic" class="anchor" href="#globallogic" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GlobalLogic</h1>
+<p>Paweł Bryła
+Strzegomska 46A
+Pin 8090</p>
+<h1>
 <a id="user-content-cv" class="anchor" href="#cv" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CV</h1>
 <ul>
 <li>PythonTranslate,</li>
@@ -1116,4 +1121,23 @@ Testowanie Bottom - Up</p>
 <p>Najlepszą metodą prezentacji działania PSK jest diagram konstelacyjny. Diagram umieszczony jest w układzie liczb zespolonych. Oś liczb rzeczywistych przedstawia składową synfazową, natomiast oś liczb urojonych kwadraturową. Amplituda każdego punktu na osi synfazowej jest używana do modulacji sygnału cosinus, amplituda drugiej osi moduluje sygnał sinus (lub odwrotnie). W przypadku PSK, punkty na diagramie rozmieszczane są równomiernie na okręgu, co pozwala osiągnąć maksymalną odległość między fazami i tym samym najmniejsze prawdopodobieństwo błędu. Ponieważ punkty są umieszczone na okręgu, transmitowane są z tą sama energią, a co za tym idzie amplitudy sygnałów sinus i cosinus również są takie same.</p>
 <p>Dwa najprostsze przykłady PSK to BPSK (ang. Binary Phase-Shift Keying), w którym używa się dwóch faz, oraz QPSK – (ang. Quadrature Phase-Shift Keing), w którym używa się czterech faz.</p>
 <p>Używana może być dowolna liczba faz. Jednak ponieważ transmitowane dane mają charakter binarny, model PSK zazwyczaj zaprojektowany jest z liczbą punktów konstelacyjnych będącą potęgą dwójki.</p>
+<h3>
+<a id="user-content-rs232" class="anchor" href="#rs232" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RS232</h3>
+<p>Standard RS-232 opisuje sposób połączenia urządzeń DTE (ang. Data Terminal Equipment) tj. urządzeń końcowych danych (np. komputer) oraz urządzeń DCE (ang. Data Communication Equipment), czyli urządzeń komunikacji danych (np. modem). Standard określa nazwy styków złącza oraz przypisane im sygnały a także specyfikację elektryczną obwodów wewnętrznych. Standard ten definiuje normy wtyczek i przewodów portów szeregowych typu COM. Standard RS-232 (ang. Recommended Standard) opracowano w 1962 roku na zlecenie amerykańskiego stowarzyszenia producentów urządzeń elektronicznych (Electronic Industries Alliance) w celu ujednolicenia parametrów sygnałów i konstrukcji urządzeń zdolnych do wymiany danych cyfrowych za pomocą sieci telefonicznej.</p>
+<p><a href="https://camo.githubusercontent.com/9299aefd5b27fe20aeeff815edc924f8b5068ab6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38372f52532d3233322e6a706567" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/9299aefd5b27fe20aeeff815edc924f8b5068ab6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38372f52532d3233322e6a706567" alt="alt text" title=" " data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/8/87/RS-232.jpeg" style="max-width:100%;"></a></p>
+<h3>
+<a id="user-content-spi" class="anchor" href="#spi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SPI</h3>
+<p>SPI (ang. Serial Peripheral Interface) – szeregowy interfejs urządzeń peryferyjnych. Jeden z najczęściej używanych interfejsów komunikacyjnych pomiędzy systemami mikroprocesorowymi a układami peryferyjnymi takimi jak: przetworniki ADC/DAC, układy RTC, pamięci EEPROM, pamięci flash, karty MMC/SD/ itp.</p>
+<p><a href="https://camo.githubusercontent.com/b3f1cd0e8c6a4e9a8e7a02ed37045284c74eaea3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f652f65642f5350495f73696e676c655f736c6176652e737667" target="_blank" rel="nofollow"><img src="https://camo.githubusercontent.com/b3f1cd0e8c6a4e9a8e7a02ed37045284c74eaea3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f652f65642f5350495f73696e676c655f736c6176652e737667" alt="alt text" title=" " data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/e/ed/SPI_single_slave.svg" style="max-width:100%;"></a></p>
+<p>Komunikacja poprzez SPI odbywa się synchronicznie za pomocą 3 linii:</p>
+<ul>
+<li>MOSI (ang. Master Output Slave Input) – dane dla układu peryferyjnego,</li>
+<li>MISO (ang. Master Input Slave Output) – dane z układu peryferyjnego,</li>
+<li>SCLK (ang. Serial CLocK) – sygnał zegarowy (taktujący).</li>
+</ul>
+<p>Do aktywacji wybranego układu peryferyjnego służy dodatkowo linia SS (ang. Slave Select – wybór układu podrzędnego) lub adresacja układów. W drugim przypadku, w przesyłanej wiadomości zawarty musi być adres urządzenia, które po jego rozpoznaniu przyjmuje pozostałe bajty. Adresowanie układów wykorzystywane jest szczególnie podczas pracy z rozbudowanymi systemami, których poszczególne części można programować niezależnie, także po zamontowaniu na płytce.</p>
+<h3>
+<a id="user-content-i2c" class="anchor" href="#i2c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I2C</h3>
+<p>Szeregowa, dwukierunkowa magistrala służąca do przesyłania danych w urządzeniach elektronicznych. Została opracowana przez przedsiębiorstwo Philips[1] na początku lat 80. Znana również pod akronimem IIC, którego angielskie rozwinięcie Inter-Integrated Circuit oznacza „pośrednik pomiędzy układami scalonymi”. Standard I²C określa dwie najniższe warstwy modelu odniesienia OSI: warstwę fizyczną i warstwę łącza danych.</p>
+<p>I²C do transmisji wykorzystuje dwie dwukierunkowe linie: SDA – linia danych (ang. Serial Data Line) i SCL – linia zegara (ang. Serial Clock Line)[3]. Obydwie linie są na stałe podciągnięte do źródła zasilania poprzez rezystory[4] podciągające (ang. pull-up). I²C używa logiki dodatniej, a więc stan niski na magistrali odpowiada „0” logicznemu, natomiast stan wysoki „1” logicznej.</p>
 </article></body></html>
