@@ -1063,12 +1063,42 @@ Testowanie Bottom - Up</p>
 <p><strong>Warstwa prezentacji</strong> przekształca dane użytkowników do postaci standardowej, używanej w sieci (np. zamiana Little Endian na Big Endian). Innymi cechami tej warstwy jest kompresja oraz szyfrowanie danych.</p>
 <p><strong>Warstwa aplikacji</strong> zapewnia obsługę użytkowników w dostępie do usług (transmisja plików, zdalny terminal, poczta, etc.).</p>
 <p>Koncepcja modelu TCP/IP jest identyczna jak w modelu OSI/ISO. Obecnie jest wykorzystywany jako struktura Internetu. Architektura tego modelu została opracowana w celu umożliwienia komunikacji między systemami pochodzącymi od różnych dostawców. W porównaniu do modelu OSI posiada mniej warstw, analogiczne warstwy zostały zaznaczone identycznym kolorem, jak w poprzedniej tabeli.</p>
-<p>| Numer | Warstwa | Technologie | Urządzenia |
-| --- | --- |
-| 1 | aplikacji | HTTP, XMPP, FTP, IRC, SSH | - |
-| 2 | transportowa | TCP, UDP | - |
-| 3 | Internetu | IP, RIP, OSPF | Router, Switch |
-| 4 | dostępu do sieci | Ethernet, WiFi | Switch, Hub |</p>
+<table>
+<thead>
+<tr>
+<th>Numer</th>
+<th>Warstwa</th>
+<th>Technologie</th>
+<th>Urządzenia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>aplikacji</td>
+<td>HTTP, XMPP, FTP, IRC, SSH</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>transportowa</td>
+<td>TCP, UDP</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Internetu</td>
+<td>IP, RIP, OSPF</td>
+<td>Router, Switch</td>
+</tr>
+<tr>
+<td>4</td>
+<td>dostępu do sieci</td>
+<td>Ethernet, WiFi</td>
+<td>Switch, Hub</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Warstwa dostępu do sieci</strong> może zawierać protokoły dynamicznego przydzielania adresów IP. Protokoły działające w tej warstwie: Ethernet, WiFi.</p>
 <p><strong>Warstwa Internetu</strong> przetwarza dane posiadające adresy IP. Protokół działający w tej warstwie: IP.</p>
 <p><strong>Warstwa transportowa</strong> wykorzystuje protokoły TCP oraz UDP. Przesyłanie danych do odpowiednich aplikacji odbywa się za pomocą portów określonych dla każdego połączenia.</p>
@@ -1174,25 +1204,22 @@ Testowanie Bottom - Up</p>
         <span class="pl-k">return</span> <span class="pl-c1">False</span></pre></div>
 <h3>
 <a id="user-content-zliczanie" class="anchor" href="#zliczanie" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Zliczanie</h3>
-<pre lang="python3"><code># liczby
-def count(input):
-    out = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    for i in range(0, 10):
-        howmany = input.count(str(i))
-        out[i] = howmany
-    for i in range(len(out)):
-        if not out[i] == 0:
-            print(i, ": ", out[i])
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">countNum</span>(<span class="pl-smi">input</span>):
+    out <span class="pl-k">=</span> [<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>]
+    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>):
+        howmany <span class="pl-k">=</span> <span class="pl-c1">input</span>.count(<span class="pl-c1">str</span>(i))
+        out[i] <span class="pl-k">=</span> howmany
+    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">len</span>(out)):
+        <span class="pl-k">if</span> <span class="pl-k">not</span> out[i] <span class="pl-k">==</span> <span class="pl-c1">0</span>:
+            <span class="pl-c1">print</span>(i, <span class="pl-s"><span class="pl-pds">"</span>: <span class="pl-pds">"</span></span>, out[i])
 
-# litery
-def count(input):
-    out = []
-    while len(input) &gt; 0:
-        tmp_char = input[0]
-        tmp_len = len(input)
-        input = input.replace(tmp_char, '')
-        out.append((tmp_char, tmp_len - len(input)))
-    for i in range(len(out)):
-        print(out[i])
-</code></pre>
+<span class="pl-k">def</span> <span class="pl-en">countChar</span>(<span class="pl-smi">input</span>):
+    out <span class="pl-k">=</span> []
+    <span class="pl-k">while</span> <span class="pl-c1">len</span>(<span class="pl-c1">input</span>) <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>:
+        tmp_char <span class="pl-k">=</span> <span class="pl-c1">input</span>[<span class="pl-c1">0</span>]
+        tmp_len <span class="pl-k">=</span> <span class="pl-c1">len</span>(<span class="pl-c1">input</span>)
+        <span class="pl-c1">input</span> <span class="pl-k">=</span> <span class="pl-c1">input</span>.replace(tmp_char, <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>)
+        out.append((tmp_char, tmp_len <span class="pl-k">-</span> <span class="pl-c1">len</span>(<span class="pl-c1">input</span>)))
+    <span class="pl-k">for</span> i <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">len</span>(out)):
+        <span class="pl-c1">print</span>(out[i])</pre></div>
 </article></body></html>
